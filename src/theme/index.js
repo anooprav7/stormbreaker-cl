@@ -64,5 +64,72 @@ export default {
       800: "#C62828",
       900: "#B71C1C"
     }
+  },
+
+  // Typography
+	fontSize: {
+		h1: {
+			size: '48px',
+			lineHeight: '56px'
+		},
+		h2: {
+			size: '36px',
+			lineHeight: '48px'
+		},
+		h3: {
+			size: '32px',
+			lineHeight: '44px'
+		},
+		h4: {
+			size: '24px',
+			lineHeight: '32px'
+		},
+		body3: {
+			size: '20px',
+			lineHeight: '28px'
+		},
+		body2: {
+			size: '16px',
+			lineHeight: '20px'
+		},
+		body1: {
+			size: '14px',
+			lineHeight: '20px'
+		},
+		caption2: {
+			size: '12px',
+			lineHeight: '16px'
+		},
+		caption1: {
+			size: '10px',
+			lineHeight: '12px'
+		}
+	},
+	lineHeight: {
+		solid: 1,
+		title: 1.25,
+		copy: 1.5
+  },
+  fontWeights: {
+		lighter: 200,
+		light: 300,
+		normal: 400,
+		medium: 500,
+		semibold: 600,
+		bold: 700
+  },
+  letterSpacing: {
+		tight: '-1px',
+		normal: '0px',
+		wide: '1px'
+  },
+  
+  zIndex: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+
+  sizeOfSpace = (value) => {
+    const values = [].concat(value);
+    return values
+      .map((v) => typeof v === 'string' ? v : `${v * SCALE}px`)
+      .join(' ');
   }
 }
