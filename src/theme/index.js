@@ -121,7 +121,7 @@ export default {
 		title: 1.25,
 		copy: 1.5
 	},
-	fontWeights: {
+	fontWeight: {
 		lighter: 200,
 		light: 300,
 		normal: 400,

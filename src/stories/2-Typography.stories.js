@@ -1,10 +1,15 @@
-import React from 'react';
-import { action } from '@storybook/addon-actions';
-import Text  from '../components/Typography';
+import React from 'react'
+import Text from '../components/Typography';
+import themeDecorator from './themeDecorator';
 
 export default {
 	title: 'Typography',
-	component: Text
+	component: Text,
+	decorators: [themeDecorator]
 };
 
-export const Typography = () => <Text>Hello ! I am Text component</Text>;
+export const size = () => (
+	<Text fontSize='body2' fontWeight="semibold">
+		Hello ! I am Text component
+	</Text>
+);
