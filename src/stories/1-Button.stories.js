@@ -1,14 +1,22 @@
 import React from "react"
 import { action } from "@storybook/addon-actions"
 import { Button } from "@storybook/react/demo"
+import themeDecorator from "./themeDecorator"
+import styled from "@emotion/styled"
 
 export default {
   title: "Button",
-  component: Button
+  component: Button,
+  decorators: [themeDecorator]
 }
 
+const Btn = styled.button`
+  background-color: ${props => props.theme.colors.primary[100]};
+`
+
 export const Text = () => (
-  <Button onClick={action("clicked")}>Hello Button</Button>
+  <Btn>{"Hello Button"}</Btn>
+  // </ThemeProvider>
 )
 
 export const Emoji = () => (
