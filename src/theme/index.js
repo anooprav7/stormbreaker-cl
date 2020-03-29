@@ -7,16 +7,16 @@ export default {
 		black: '#000000',
 		// Light Blue
 		primary: {
-			50: '#E1F5FE',
-			100: '#B3E5FC',
-			200: '#81D4FA',
-			300: '#4FC3F7',
-			400: '#29B6F6',
-			500: '#03A9F4',
-			600: '#039BE5',
-			700: '#0288D1',
-			800: '#0277BD',
-			900: '#01579B'
+			50: '#E8EAF6',
+			100: '#C5CAE9',
+			200: '#9FA8DA',
+			300: '#7986CB',
+			400: '#5C6BC0',
+			500: '#3F51B5',
+			600: '#3949AB',
+			700: '#303F9F',
+			800: '#283593',
+			900: '#1A237E'
 		},
 		secondary: {
 			50: '#FAFAFA',
@@ -69,7 +69,10 @@ export default {
 	},
 
 	// Typography
-	fontSize: {
+
+	fontSizes: [0, '10px', '12px', '14px', '16px', '20px', '24px', '32px', '36px', '48px'],
+
+	typographyVariants: {
 		h1: {
 			size: '48px',
 			lineHeight: '56px',
