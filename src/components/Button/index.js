@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import theme from "../../theme"
+// import theme from "../../theme"
 
 import styles from "./styles"
 
