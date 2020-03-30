@@ -5,7 +5,7 @@ import theme from "../../theme"
 
 import styles from "./styles"
 
-const StyledButton = styled(
+let StyledButton = styled(
   ({ appearance, size, outline, block, loading, href, ...props }) => (
     <button {...props} />
   )
@@ -28,6 +28,7 @@ const StyledButton = styled(
   background-color: ${styles.backgroundColor};
   letter-spacing: 1px;
   transition: background 250ms ease, border-color 250ms ease;
+  text-decoration: none;
 
   &:hover {
     color: ${styles.hover.color};
@@ -37,20 +38,26 @@ const StyledButton = styled(
 `
 
 function Button(props) {
-  return <StyledButton {...props}>{props.children}</StyledButton>
+  const { children, ...remainingProps } = props
+  if (remainingProps.href) StyledButton = StyledButton.withComponent("a")
+  return <StyledButton {...remainingProps}>{children}</StyledButton>
 }
 
 const colorKeys = ["primary", "secondary"]
 // const colorKeys = Object.keys(theme.colors)
 
 Button.propTypes = {
-  /** appearance decides the color */
+  /** Color class of button */
   appearance: PropTypes.oneOf(colorKeys),
-  /** size decides the size */
+  /** The size of the button */
   size: PropTypes.oneOf(["small", "medium", "large"]),
+  /** The color and border switches to color, background becomes white */
   outline: PropTypes.bool,
+  /** Button width becomes container width */
   block: PropTypes.bool,
+  /** Loading state */
   loading: PropTypes.bool,
+  /** Anchor button to redirection to href */
   href: PropTypes.string
 }
 
