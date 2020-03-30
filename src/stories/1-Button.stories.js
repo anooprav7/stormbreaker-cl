@@ -16,7 +16,7 @@ const Btn = styled.button`
 `
 
 export const Showcase = () => (
-  <div>
+  <div style={{ margin: 10 }}>
     <Button>{"Default"}</Button>
     <div style={{ padding: 5 }} />
     <Button appearance="secondary">{"secondary"}</Button>
