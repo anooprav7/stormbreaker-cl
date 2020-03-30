@@ -14,7 +14,8 @@ import styled from "@emotion/styled"
 export default {
   title: "Button",
   component: Button,
-  decorators: [withInfo, themeDecorator]
+  // decorators: [withInfo, themeDecorator]
+  decorators: [themeDecorator]
 }
 
 const Btn = styled.button`
@@ -24,7 +25,7 @@ const Btn = styled.button`
 export const Showcase = () => (
   <div style={{ margin: 10 }}>
     <Button>{"Default"}</Button>
-    <div style={{ padding: 5 }} />
+    {/* <div style={{ padding: 5 }} />
     <Button appearance="secondary">{"secondary"}</Button>
     <div style={{ padding: 5 }} />
     <Button outline>{"Outline"}</Button>
@@ -35,19 +36,82 @@ export const Showcase = () => (
     <div style={{ padding: 5 }} />
     <Button disabled>{"Disabled"}</Button>
     <div style={{ padding: 5 }} />
+
     <Button size="small">{"small"}</Button>
     <span style={{ padding: 3 }} />
     <Button>{"Default"}</Button>
     <span style={{ padding: 3 }} />
     <Button size="large">{"large"}</Button>
+
     <div style={{ padding: 5 }} />
+    <Button href="https://www.google.com/">{"Google anchor"}</Button>
+    <div style={{ padding: 5 }} />
+    <Button href="https://www.google.com/" outline>
+      {"Google anchor"}
+    </Button> */}
   </div>
 )
 
-export const Emoji = () => (
-  <Button onClick={action("clicked")}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
-  </Button>
+export const Sizes = () => (
+  <>
+    <Button size="small">{"small"}</Button>
+    <span style={{ padding: 3 }} />
+    <Button>{"Default"}</Button>
+    <span style={{ padding: 3 }} />
+    <Button size="large">{"large"}</Button>
+  </>
+)
+
+export const Appearances = () => (
+  <>
+    <Button>{"Primary"}</Button>
+    <span style={{ padding: 5 }} />
+    <Button appearance="secondary">{"Secondary"}</Button>
+    <span style={{ padding: 5 }} />
+    <Button appearance="warning">{"Warning"}</Button>
+    <span style={{ padding: 5 }} />
+    <Button appearance="success">{"Success"}</Button>
+    <span style={{ padding: 5 }} />
+    <Button appearance="error">{"Error"}</Button>
+  </>
+)
+
+export const Outline = () => (
+  <>
+    <Button outline>{"Primary"}</Button>
+    <span style={{ padding: 5 }} />
+    <Button outline appearance="secondary">
+      {"Secondary"}
+    </Button>
+    <span style={{ padding: 5 }} />
+    <Button outline appearance="warning">
+      {"Warning"}
+    </Button>
+    <span style={{ padding: 5 }} />
+    <Button outline appearance="success">
+      {"Success"}
+    </Button>
+    <span style={{ padding: 5 }} />
+    <Button outline appearance="error">
+      {"Error"}
+    </Button>
+  </>
+)
+
+// export const Outline = () => <Button outline>{"Outline"}</Button>
+
+export const BlockButton = () => <Button block>{"Block"}</Button>
+
+export const Loading = () => <Button loading>{"Loading"}</Button>
+
+export const Disabled = () => <Button disabled>{"Loading"}</Button>
+
+export const AnchorButton = () => (
+  <>
+    <Button href="https://www.google.com/">{"Google Link"}</Button>
+    <span style={{ padding: 5 }} />
+    <Button href="https://www.google.com/" outline>
+      {"Google Link"}
+    </Button>
+  </>
 )
