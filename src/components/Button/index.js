@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
+import theme from "../../theme"
 
 import styles from "./styles"
 
-const Button = styled(
+const StyledButton = styled(
   ({ appearance, size, outline, block, loading, href, ...props }) => (
     <button {...props} />
   )
@@ -35,9 +36,17 @@ const Button = styled(
   }
 `
 
+function Button(props) {
+  return <StyledButton {...props}>{props.children}</StyledButton>
+}
+
+const colorKeys = ["primary", "secondary"]
+// const colorKeys = Object.keys(theme.colors)
+
 Button.propTypes = {
-  /* appearance decides the color */
-  appearance: PropTypes.oneOf(["primary", "secondary"]),
+  /** appearance decides the color */
+  appearance: PropTypes.oneOf(colorKeys),
+  /** size decides the size */
   size: PropTypes.oneOf(["small", "medium", "large"]),
   outline: PropTypes.bool,
   block: PropTypes.bool,

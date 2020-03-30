@@ -1,14 +1,20 @@
 import React from "react"
 import { action } from "@storybook/addon-actions"
+import { withInfo } from "@storybook/addon-info"
+
 // import { Button } from "@storybook/react/demo"
 import Button from "../components/Button"
 import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
 
+// function Button(props) {
+//   return <StyledButton {...props}>{props.children}</StyledButton>
+// }
+
 export default {
   title: "Button",
   component: Button,
-  decorators: [themeDecorator]
+  decorators: [withInfo, themeDecorator]
 }
 
 const Btn = styled.button`

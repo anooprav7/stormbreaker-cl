@@ -37,6 +37,10 @@ export default {
       if (props.loading || props.disabled) return ""
       if (props.outline) return props.theme.colors.secondary[100]
       return props.theme.colors[props.appearance][700]
+    },
+    borderColor(props) {
+      // if (props.outline) return props.theme.color[props.color]
+      return props.theme.colors[props.appearance][700]
     }
   }
 }
