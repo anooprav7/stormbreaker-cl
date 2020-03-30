@@ -62,7 +62,21 @@ export default {
   },
 
   // Typography
-  fontSize: {
+
+  fontSizes: [
+    0,
+    "10px",
+    "12px",
+    "14px",
+    "16px",
+    "20px",
+    "24px",
+    "32px",
+    "36px",
+    "48px"
+  ],
+
+  typographyVariants: {
     h1: {
       size: "48px",
       lineHeight: "56px",
@@ -114,7 +128,7 @@ export default {
     title: 1.25,
     copy: 1.5
   },
-  fontWeights: {
+  fontWeight: {
     lighter: 200,
     light: 300,
     normal: 400,
