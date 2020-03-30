@@ -41,6 +41,11 @@ export const Showcase = () => (
     <span style={{ padding: 3 }} />
     <Button size="large">{"large"}</Button>
     <div style={{ padding: 5 }} />
+    <Button href="https://www.google.com/">{"Google anchor"}</Button>
+    <div style={{ padding: 5 }} />
+    <Button href="https://www.google.com/" outline>
+      {"Google anchor"}
+    </Button>
   </div>
 )
 
