@@ -32,7 +32,7 @@ const styles = {
 	}
 };
 
-const Text = styled(
+const StyledText = styled(
 	({
 		as,
 		variant,
@@ -98,22 +98,31 @@ const Text = styled(
 	overflow: ${props => (props.truncate ? 'hidden' : '')};
 `;
 
+function Text(props){
+	return <StyledText {...props}>{props.children}</StyledText>
+}
+
 Text.propTypes = {
 	as: PropTypes.node,
-	variant: PropTypes.oneOf(Object.keys(theme.typographyVariants)),
+	/** variant decides the text variant with predefined fontsize and lineheight */
+	variant: PropTypes.oneOf(['h1','h2','h3','h4','body3','body2','body1','caption2','caption1']),
+	/** Defines color of text */
 	color: PropTypes.oneOf(Object.keys(theme.colors)),
+	/** Defines the shade of color  */
 	colorWeight: PropTypes.number,
-	fontSize: PropTypes.number,
-	fontWeight: PropTypes.oneOf(Object.keys(theme.fontWeight)),
-	lineHeight: PropTypes.oneOf(Object.keys(theme.lineHeight)),
-	letterSpacing: PropTypes.oneOf(Object.keys(theme.letterSpacing)),
+	/** Defines the font size of the text  */
+	fontSize: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
+	fontWeight: PropTypes.oneOf(['lighter', 'light', 'normal', 'medium', 'semibold', 'bold', 'bolder']),
+	lineHeight: PropTypes.oneOf(['solid', 'title', 'copy']),
+	letterSpacing: PropTypes.oneOf(['tight','normal','wide']),
 	align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
 	truncate: PropTypes.bool,
 	noWrap: PropTypes.bool
 };
 
 Text.defaultProps = {
-	colorWeight: 500
+	colorWeight: 500,
+	fontWeight: 'normal'
 };
 
 Text.displayName = 'Text';
