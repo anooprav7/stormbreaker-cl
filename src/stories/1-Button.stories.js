@@ -25,30 +25,6 @@ const Btn = styled.button`
 export const Showcase = () => (
   <div style={{ margin: 10 }}>
     <Button>{"Default"}</Button>
-    {/* <div style={{ padding: 5 }} />
-    <Button appearance="secondary">{"secondary"}</Button>
-    <div style={{ padding: 5 }} />
-    <Button outline>{"Outline"}</Button>
-    <div style={{ padding: 5 }} />
-    <Button block>{"Block"}</Button>
-    <div style={{ padding: 5 }} />
-    <Button loading>{"Loading"}</Button>
-    <div style={{ padding: 5 }} />
-    <Button disabled>{"Disabled"}</Button>
-    <div style={{ padding: 5 }} />
-
-    <Button size="small">{"small"}</Button>
-    <span style={{ padding: 3 }} />
-    <Button>{"Default"}</Button>
-    <span style={{ padding: 3 }} />
-    <Button size="large">{"large"}</Button>
-
-    <div style={{ padding: 5 }} />
-    <Button href="https://www.google.com/">{"Google anchor"}</Button>
-    <div style={{ padding: 5 }} />
-    <Button href="https://www.google.com/" outline>
-      {"Google anchor"}
-    </Button> */}
   </div>
 )
 
@@ -102,9 +78,29 @@ export const Outline = () => (
 
 export const BlockButton = () => <Button block>{"Block"}</Button>
 
-export const Loading = () => <Button loading>{"Loading"}</Button>
+export const Loading = () => (
+  <>
+    <Button loading>{"Primary"}</Button>
+    <span style={{ padding: 5 }} />
+    <Button loading appearance="secondary">
+      {"Secondary"}
+    </Button>
+    <span style={{ padding: 5 }} />
+    <Button loading appearance="warning">
+      {"Warning"}
+    </Button>
+    <span style={{ padding: 5 }} />
+    <Button loading appearance="success">
+      {"Success"}
+    </Button>
+    <span style={{ padding: 5 }} />
+    <Button loading appearance="error">
+      {"Error"}
+    </Button>
+  </>
+)
 
-export const Disabled = () => <Button disabled>{"Loading"}</Button>
+export const Disabled = () => <Button disabled>{"Disabled"}</Button>
 
 export const AnchorButton = () => (
   <>

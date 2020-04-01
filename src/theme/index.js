@@ -4,6 +4,8 @@
 import colors from "./colors"
 
 const SCALE = 4
+export const colorKeys = ["primary", "secondary", "success", "error", "warning"]
+export const colorWeights = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
 
 export default {
   colors: {
@@ -35,18 +37,7 @@ export default {
       800: "#2E7D32",
       900: "#1B5E20"
     },
-    warning: {
-      50: "#FFFDE7",
-      100: "#FFF9C4",
-      200: "#FFF59D",
-      300: "#FFF176",
-      400: "#FFEE58",
-      500: "#FFEB3B",
-      600: "#FDD835",
-      700: "#FBC02D",
-      800: "#F9A825",
-      900: "#F57F17"
-    },
+    warning: colors.orange,
     error: {
       50: "#FFEBEE",
       100: "#FFCDD2",

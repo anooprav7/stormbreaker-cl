@@ -22,6 +22,7 @@ export default {
     return props.theme.colors[props.appearance][500]
   },
   color(props) {
+    // TODO Anoop - Add outline hover to 700 and remove bkground color
     if (props.outline) return props.theme.colors[props.appearance][500]
     return props.theme.colors.white
   },
@@ -35,12 +36,16 @@ export default {
   hover: {
     backgroundColor(props) {
       if (props.loading || props.disabled) return ""
-      if (props.outline) return props.theme.colors.secondary[100]
+      if (props.outline) return ""
       return props.theme.colors[props.appearance][700]
     },
     borderColor(props) {
       // if (props.outline) return props.theme.color[props.color]
       return props.theme.colors[props.appearance][700]
+    },
+    color(props) {
+      if (props.outline) return props.theme.colors[props.appearance][700]
+      return props.theme.colors.white
     }
   }
 }
