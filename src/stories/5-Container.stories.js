@@ -25,21 +25,21 @@ export const Default = () => (
 		<Box pt={7} />
 		<Container>
 			<Grid span={4}>
-				<Box display='flex' alignItems='center' justifyContent='center' bg={'primary'} height={50}>
+				<Box display='flex' alignItems='center' justifyContent='center' colorLevel={800} bg={'primary'} height={50}>
 					<Text color='white' variant='body1'>
 						4*column
 					</Text>
 				</Box>
 			</Grid>
 			<Grid span={2}>
-				<Box display='flex' alignItems='center' justifyContent='center' bg={'primary'} height={50}>
+				<Box display='flex' alignItems='center' justifyContent='center' colorLevel={800} bg={'primary'} height={50}>
 					<Text color='white' variant='body1'>
 						2*column
 					</Text>
 				</Box>
 			</Grid>
 			<Grid span={6}>
-				<Box display='flex' alignItems='center' justifyContent='center' bg={'primary'} height={50}>
+				<Box display='flex' alignItems='center' justifyContent='center' colorLevel={800} bg={'primary'} height={50}>
 					<Text color='white' variant='body1'>
 						6*column
 					</Text>
