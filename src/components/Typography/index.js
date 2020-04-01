@@ -8,7 +8,7 @@ const styles = {
 		if (props.color === 'white' || props.color === 'white') {
 			return props.theme.colors[props.color];
 		} else if (props.color) {
-			return props.theme.colors[props.color][props.colorWeight];
+			return props.theme.colors[props.color][props.colorLevel];
 		}
 		return '';
 	},
@@ -37,7 +37,7 @@ const StyledText = styled(
 		as,
 		variant,
 		color,
-		colorWeight,
+		colorLevel,
 		fontSize,
 		fontWeight,
 		lineHeight,
@@ -109,7 +109,7 @@ Text.propTypes = {
 	/** Defines color of text */
 	color: PropTypes.oneOf(Object.keys(theme.colors)),
 	/** Defines the shade of color  */
-	colorWeight: PropTypes.number,
+	colorLevel: PropTypes.number,
 	/** Defines the font size of the text  */
 	fontSize: PropTypes.oneOf([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
 	fontWeight: PropTypes.oneOf(['lighter', 'light', 'normal', 'medium', 'semibold', 'bold', 'bolder']),
@@ -121,7 +121,7 @@ Text.propTypes = {
 };
 
 Text.defaultProps = {
-	colorWeight: 500,
+	colorLevel: 500,
 	fontWeight: 'normal'
 };
 

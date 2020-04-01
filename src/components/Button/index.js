@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-// import theme from "../../theme"
 
 import styles from "./styles"
 
@@ -29,7 +28,6 @@ let StyledButton = styled(
   letter-spacing: 1px;
   transition: background 250ms ease, border-color 250ms ease;
   text-decoration: none;
-
   &:hover {
     color: ${styles.hover.color};
     background-color: ${styles.hover.backgroundColor};
