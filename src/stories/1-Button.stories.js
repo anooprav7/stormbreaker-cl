@@ -80,6 +80,11 @@ export const BlockButton = () => <Button block>{"Block"}</Button>
 
 export const Loading = () => (
   <>
+    <div style={{ color: "#2f2f2f" }}>
+      While loading state is applied, we change the font color to match bg color
+      to maintain same width
+    </div>
+    <div style={{ margin: 5 }} />
     <Button loading>{"Primary"}</Button>
     <span style={{ padding: 5 }} />
     <Button loading appearance="secondary">

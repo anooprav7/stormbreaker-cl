@@ -19,16 +19,16 @@ export default {
   },
   borderColor(props) {
     // if (props.outline) return props.theme.color[props.color]
-    return props.theme.colors[props.appearance][500]
+    return props.theme.colors[props.appearance][400]
   },
   color(props) {
     // TODO Anoop - Add outline hover to 700 and remove bkground color
-    if (props.outline) return props.theme.colors[props.appearance][500]
+    if (props.outline) return props.theme.colors[props.appearance][400]
     return props.theme.colors.white
   },
   backgroundColor(props) {
     if (props.outline) return props.theme.colors.white
-    return props.theme.colors[props.appearance][500]
+    return props.theme.colors[props.appearance][400]
   },
   padding(props) {
     return SIZE_PADDING_MAP[props.size]

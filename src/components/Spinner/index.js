@@ -96,7 +96,7 @@ Spinner.propTypes = {
 Spinner.defaultProps = {
   appearance: "primary",
   size: "medium",
-  colorLevel: 500
+  colorLevel: 400
 }
 
 export default Spinner

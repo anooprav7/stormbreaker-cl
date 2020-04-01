@@ -55,6 +55,7 @@ function Button(props) {
   console.log("children ", children, " ", remainingProps.loading)
   if (remainingProps.loading) {
     LoadingButton = styled(StyledButton)`
+      opacity: 1;
       position: relative;
       color: ${styles.backgroundColor};
       &:hover {
@@ -68,7 +69,7 @@ function Button(props) {
           <SpinnerContainer>
             <Spinner
               appearance={remainingProps.appearance}
-              colorLevel={100}
+              colorLevel={50}
               size="small"
             />
           </SpinnerContainer>
