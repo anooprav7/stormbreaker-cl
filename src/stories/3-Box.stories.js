@@ -13,8 +13,8 @@ export default {
 
 export const Showcase = () => (
 	<>
-		<Box bg='primary' colorLevel={800} py={10} borderRadius={4} mb={8}>
-			<Text color='white' align='center' variant='body3'>
+		<Box bg='primary' width={400} colorLevel={800} py={10} px={10} mb={8}>
+			<Text color='white' variant='body3'>
 				Box component
 			</Text>
 		</Box>
