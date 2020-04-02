@@ -1,14 +1,16 @@
-import React from 'react';
-import { linkTo } from '@storybook/addon-links';
-import { Welcome } from '@storybook/react/demo';
+import React from "react"
+import { linkTo } from "@storybook/addon-links"
+import { Welcome } from "@storybook/react/demo"
 
 export default {
-  title: 'Welcome',
-  component: Welcome,
-};
+  title: "Stormbreaker",
+  component: Welcome
+}
 
-export const ToStorybook = () => <Welcome showApp={linkTo('Button')} />;
+export const Description = () => (
+  <div style={{ margin: 15 }}>{"Stormbreaker IS Here"}</div>
+)
 
-ToStorybook.story = {
-  name: 'to Storybook',
-};
+Description.story = {
+  name: "Description"
+}
