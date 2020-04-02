@@ -95,6 +95,32 @@ export default {
     800: "#2E7D32",
     900: "#1B5E20"
   },
+  // https://material.io/design/color/#tools-for-picking-colors
+  compBlue: {
+    50: "#f9eae8",
+    100: "#fbcfbe",
+    200: "#fab195",
+    300: "#f8946a",
+    400: "#f77e49",
+    500: "#f66a29",
+    600: "#eb6425",
+    700: "#dd5d21",
+    800: "#cf561e",
+    900: "#b64a19"
+  },
+  // https://getbootstrap.com/docs/4.0/utilities/colors/
+  bootWarn: {
+    50: "#fff8e1",
+    100: "#ffecb3",
+    200: "#ffe082",
+    300: "#ffd54f",
+    400: "#ffca28",
+    500: "#ffc107",
+    600: "#ffb300",
+    700: "#ffa000",
+    800: "#ff8f00",
+    900: "#ff6f00"
+  },
   cos: {
     green: {
       50: "#e5f8e9",

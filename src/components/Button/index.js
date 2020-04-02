@@ -62,7 +62,6 @@ function Button(props) {
         color: ${styles.backgroundColor};
       }
     `
-    //<Spinner appearance="warning" />
     return (
       <LoadingButton disabled {...remainingProps}>
         <>

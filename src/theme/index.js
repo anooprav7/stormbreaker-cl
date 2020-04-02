@@ -13,9 +13,10 @@ export default {
     black: "#000000",
     // Light Blue
     primary: colors.cos.blue,
-    secondary: colors.cos.grey,
+    // secondary: colors.cos.grey,
+    secondary: colors.compBlue,
     success: colors.cos.green,
-    warning: colors.orange,
+    warning: colors.bootWarn,
     error: {
       50: "#FFEBEE",
       100: "#FFCDD2",
@@ -27,7 +28,8 @@ export default {
       700: "#D32F2F",
       800: "#C62828",
       900: "#B71C1C"
-    }
+    },
+    mono: colors.gray
   },
 
   // Typography
