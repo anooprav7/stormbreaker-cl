@@ -1,15 +1,36 @@
 {
-  "name": "stormbreaker-storybook",
-  "version": "1.0.0",
-  "description": "",
+  "name": "stormbreaker",
+  "version": "0.2.0",
+  "description": "Stormbreaker React Component Library",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9007 -s public",
+    "storybook": "start-storybook -p 9007 -s public --docs",
     "build-storybook": "build-storybook"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "stormbreaker",
+    "react",
+    "react component library"
+  ],
+  "contributors": [
+    {
+      "name": "Anoop Raveendran",
+      "email": "anooprav7@gmail.com",
+      "url": "https://anooprav7.com"
+    },
+    {
+      "name": "Nabeel Thurakkal",
+      "email": "nthurakkal92@gmail.com",
+      "url": "https://github.com/thurakkal92"
+    }
+  ],
+  "bugs": "https://github.com/anooprav7/stormbreaker/issues",
+  "author": "anooprav7@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anooprav7/stormbreaker.git"
+  },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
