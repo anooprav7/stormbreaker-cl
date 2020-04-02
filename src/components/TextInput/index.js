@@ -7,22 +7,25 @@ const StyledTextInput = styled.input`
   width: 100%;
   box-sizing: border-box;
   font-family: inherit;
-  font-size: inherit;
-  color: rgb(85, 85, 85);
-  cursor: auto;
-  background: rgb(255, 255, 255);
+  font-size: ${styles.fontSize};
+  color: ${styles.color};
+  background: ${styles.backgroundColor};
   border-width: 1px;
   border-style: solid;
   border-image: initial;
-  /* border-color: rgb(204, 204, 204); */
   border-color: ${styles.border};
+  cursor: ${styles.pointerEvents};
   border-radius: 3px;
   padding: ${styles.padding};
   transition: border-color 0.25s ease 0s, box-shadow 0.25s ease 0s;
+  opacity: ${styles.opacity};
   &:focus {
     box-shadow: ${styles.focus.boxShadow};
     border-color: ${styles.focus.borderColor};
     outline: none;
+  }
+  &::placeholder {
+    color: ${props => props.theme.colors.mono300};
   }
 `
 
@@ -32,10 +35,17 @@ function TextInput(props) {
 }
 
 TextInput.propTypes = {
+  /** Size of the Input */
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   /** Show highlight with error boundary */
-  hasError: PropTypes.bool
+  hasError: PropTypes.bool,
+  /** Disabled editing */
+  disabled: PropTypes.bool,
+  /** Message to be shown when no input  */
+  placeholder: PropTypes.string
 }
 TextInput.defaultProps = {
+  size: "medium",
   hasError: false
 }
 

@@ -1,4 +1,8 @@
 import theme from "../../theme"
+import {
+  getColorFromAppearance,
+  getColorFromTheme
+} from "../../utils/stylesHelper"
 const { sizeOfSpace } = theme
 
 const SIZE_MAP = {
@@ -9,9 +13,10 @@ const SIZE_MAP = {
 
 export default {
   border(props) {
-    return `${SIZE_MAP[props.size].strokeWidth} solid ${
-      props.theme.colors[props.appearance][props.colorLevel]
-    }`
+    return `${SIZE_MAP[props.size].strokeWidth} solid ${getColorFromTheme(
+      props.theme,
+      props.color
+    )}`
   },
   size(props) {
     return SIZE_MAP[props.size].size

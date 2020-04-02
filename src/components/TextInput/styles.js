@@ -1,20 +1,61 @@
 import theme from "../../theme"
-const { sizeOfSpace } = theme
+import { getColorFromAppearance } from "../../utils/stylesHelper"
 
+const { sizeOfSpace } = theme
+const SIZE_MAP = {
+  small: sizeOfSpace([1, 2]),
+  medium: sizeOfSpace([2, 3]),
+  large: sizeOfSpace([3, 4])
+}
+const FONT_SIZE_IDX_MAP = {
+  small: 2,
+  medium: 3,
+  large: 4
+}
 export default {
-  padding() {
-    return sizeOfSpace([2, 4])
+  backgroundColor(props) {
+    if (props.hasError) return getColorFromAppearance(theme, "error", 50)
+    return props.theme.colors.white
+  },
+  pointerEvents(props) {
+    if (props.disabled) return "no-drop"
+    return "auto"
+  },
+  opacity(props) {
+    if (props.disabled) return "0.5"
+    return ""
+  },
+  fontSize(props) {
+    const idx = FONT_SIZE_IDX_MAP[props.size]
+    return props.theme.fontSizes[idx]
+  },
+  color(props) {
+    const { theme } = props
+    return getColorFromAppearance(theme, "mono", 600)
+  },
+  padding(props) {
+    return SIZE_MAP[props.size]
   },
   border(props) {
-    if (props.hasError) return props.theme.colors.error[400]
-    return `#000`
+    const { theme } = props
+    if (props.hasError) return getColorFromAppearance(theme, "error", 400)
+    return getColorFromAppearance(theme, "mono", 300)
   },
   focus: {
     borderColor(props) {
-      return props.theme.colors.primary[400]
+      const { theme } = props
+      if (!props.hasError) return getColorFromAppearance(theme, "primary", 400)
+      return ""
     },
     boxShadow(props) {
-      return `${props.theme.colors.primary[400]} 0px 0px 0px 1px`
+      const { theme } = props
+      if (!props.hasError)
+        return `${getColorFromAppearance(
+          theme,
+          "primary",
+          400
+        )} 0px 0px 0px 1px`
+      return ""
     }
   }
 }

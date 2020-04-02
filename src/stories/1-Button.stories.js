@@ -2,14 +2,9 @@ import React from "react"
 import { action } from "@storybook/addon-actions"
 import { withInfo } from "@storybook/addon-info"
 
-// import { Button } from "@storybook/react/demo"
 import Button from "../components/Button"
 import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
-
-// function Button(props) {
-//   return <StyledButton {...props}>{props.children}</StyledButton>
-// }
 
 export default {
   title: "Button",
@@ -17,10 +12,6 @@ export default {
   // decorators: [withInfo, themeDecorator]
   decorators: [themeDecorator]
 }
-
-const Btn = styled.button`
-  background-color: ${props => props.theme.colors.primary[100]};
-`
 
 export const Showcase = () => (
   <div style={{ margin: 10 }}>
@@ -42,7 +33,7 @@ export const Appearances = () => (
   <>
     <Button>{"Primary"}</Button>
     <span style={{ padding: 5 }} />
-    <Button appearance="secondary">{"Secondary"}</Button>
+    <Button appearance="accent">{"Accent"}</Button>
     <span style={{ padding: 5 }} />
     <Button appearance="warning">{"Warning"}</Button>
     <span style={{ padding: 5 }} />
@@ -56,8 +47,8 @@ export const Outline = () => (
   <>
     <Button outline>{"Primary"}</Button>
     <span style={{ padding: 5 }} />
-    <Button outline appearance="secondary">
-      {"Secondary"}
+    <Button outline appearance="accent">
+      {"Accent"}
     </Button>
     <span style={{ padding: 5 }} />
     <Button outline appearance="warning">
@@ -74,8 +65,6 @@ export const Outline = () => (
   </>
 )
 
-// export const Outline = () => <Button outline>{"Outline"}</Button>
-
 export const BlockButton = () => <Button block>{"Block"}</Button>
 
 export const Loading = () => (
@@ -87,8 +76,8 @@ export const Loading = () => (
     <div style={{ margin: 5 }} />
     <Button loading>{"Primary"}</Button>
     <span style={{ padding: 5 }} />
-    <Button loading appearance="secondary">
-      {"Secondary"}
+    <Button loading appearance="accent">
+      {"Accent"}
     </Button>
     <span style={{ padding: 5 }} />
     <Button loading appearance="warning">

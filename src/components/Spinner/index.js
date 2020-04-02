@@ -68,35 +68,27 @@ const Line2 = styled.div`
 `
 
 function Spinner(props) {
-  const { appearance, size, colorLevel } = props
+  const { size, color } = props
   return (
     <Container size={size}>
       <SpinningWrapper size={size}>
-        <Line2 appearance={appearance} colorLevel={colorLevel} size={size} />
-        <Line1 appearance={appearance} colorLevel={colorLevel} size={size} />
+        <Line2 color={color} size={size} />
+        <Line1 color={color} size={size} />
       </SpinningWrapper>
     </Container>
   )
 }
 
 Spinner.propTypes = {
-  /** Color class of button */
-  appearance: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "success",
-    "error",
-    "warning"
-  ]),
   /** The size of the button */
   size: PropTypes.oneOf(["small", "medium", "large"]),
-  colorLevel: PropTypes.oneOf([50, 100, 200, 300, 400, 500, 600, 700, 800, 900])
+  /** Theme color or CSS valid color string */
+  color: PropTypes.string
 }
 
 Spinner.defaultProps = {
-  appearance: "primary",
   size: "medium",
-  colorLevel: 400
+  color: "primary500"
 }
 
 export default Spinner

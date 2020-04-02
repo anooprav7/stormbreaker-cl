@@ -1,35 +1,17 @@
 // https://material.io/design/color/#tools-for-picking-colors
 
 // Typography - https://material.io/design/typography/the-type-system.html#type-scale
-import colors from "./colors"
+import colors, { newTheme } from "./colors"
 
 const SCALE = 4
-export const colorKeys = ["primary", "secondary", "success", "error", "warning"]
+export const colorKeys = ["primary", "accent", "success", "error", "warning"]
 export const colorWeights = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
 
 export default {
   colors: {
     white: "#ffffff",
     black: "#000000",
-    // Light Blue
-    primary: colors.cos.blue,
-    // secondary: colors.cos.grey,
-    secondary: colors.compBlue,
-    success: colors.cos.green,
-    warning: colors.bootWarn,
-    error: {
-      50: "#FFEBEE",
-      100: "#FFCDD2",
-      200: "#EF9A9A",
-      300: "#E57373",
-      400: "#EF5350",
-      500: "#F44336",
-      600: "#E53935",
-      700: "#D32F2F",
-      800: "#C62828",
-      900: "#B71C1C"
-    },
-    mono: colors.gray
+    ...newTheme
   },
 
   // Typography

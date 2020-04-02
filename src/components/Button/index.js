@@ -65,11 +65,7 @@ function Button(props) {
       <LoadingButton disabled {...remainingProps}>
         <>
           <SpinnerContainer>
-            <Spinner
-              appearance={remainingProps.appearance}
-              colorLevel={50}
-              size="small"
-            />
+            <Spinner color={`${remainingProps.appearance}50`} size="small" />
           </SpinnerContainer>
           {children}
         </>
@@ -79,7 +75,7 @@ function Button(props) {
   return <StyledButton {...remainingProps}>{children}</StyledButton>
 }
 
-const colorKeys = ["primary", "secondary"]
+const colorKeys = ["primary", "accent", "success", "error", "warning"]
 // const colorKeys = Object.keys(theme.colors)
 
 Button.propTypes = {

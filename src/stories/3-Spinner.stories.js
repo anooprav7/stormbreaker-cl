@@ -24,13 +24,13 @@ export const Appearance = () => (
   <div style={{ margin: 10 }}>
     <Spinner />
     <span style={{ padding: 5 }} />
-    <Spinner appearance="secondary" />
+    <Spinner color="accent500" />
     <span style={{ padding: 5 }} />
-    <Spinner appearance="success" />
+    <Spinner color="success500" />
     <span style={{ padding: 5 }} />
-    <Spinner appearance="warning" />
+    <Spinner color="warning500" />
     <span style={{ padding: 5 }} />
-    <Spinner appearance="error" />
+    <Spinner color="error500" />
   </div>
 )
 
