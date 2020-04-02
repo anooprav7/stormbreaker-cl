@@ -4,8 +4,10 @@
   "description": "Stormbreaker React Component Library",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -p 9007 -s public --docs",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 9007 -s public",
+    "storybook.docs": "start-storybook -p 9007 -s public --docs",
+    "build-storybook": "build-storybook",
+    "build-storybook.docs": "build-storybook --docs"
   },
   "keywords": [
     "stormbreaker",
