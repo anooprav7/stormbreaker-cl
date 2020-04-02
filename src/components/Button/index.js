@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
+import Spinner from "../Spinner"
 
 import styles from "./styles"
 
@@ -26,7 +27,7 @@ let StyledButton = styled(
   opacity: ${styles.opacity};
   background-color: ${styles.backgroundColor};
   letter-spacing: 1px;
-  transition: background 250ms ease, border-color 250ms ease;
+  transition: background 250ms ease, border-color 250ms ease, color 250ms ease;
   text-decoration: none;
   &:hover {
     color: ${styles.hover.color};
@@ -35,13 +36,46 @@ let StyledButton = styled(
   }
 `
 
+const SpinnerContainer = styled.span`
+  top: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 function Button(props) {
   const { children, ...remainingProps } = props
+  let LoadingButton
   if (remainingProps.href) StyledButton = StyledButton.withComponent("a")
+  console.log("children ", children, " ", remainingProps.loading)
+  if (remainingProps.loading) {
+    LoadingButton = styled(StyledButton)`
+      opacity: 1;
+      position: relative;
+      color: ${styles.backgroundColor};
+      &:hover {
+        color: ${styles.backgroundColor};
+      }
+    `
+    return (
+      <LoadingButton disabled {...remainingProps}>
+        <>
+          <SpinnerContainer>
+            <Spinner color={`${remainingProps.appearance}50`} size="small" />
+          </SpinnerContainer>
+          {children}
+        </>
+      </LoadingButton>
+    )
+  }
   return <StyledButton {...remainingProps}>{children}</StyledButton>
 }
 
-const colorKeys = ["primary", "secondary"]
+const colorKeys = ["primary", "accent", "success", "error", "warning"]
 // const colorKeys = Object.keys(theme.colors)
 
 Button.propTypes = {
