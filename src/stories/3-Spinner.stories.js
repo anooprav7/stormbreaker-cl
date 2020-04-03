@@ -8,7 +8,7 @@ import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
 
 export default {
-  title: "Spinner",
+  title: "components/Spinner",
   component: Spinner,
   // decorators: [withInfo, themeDecorator]
   decorators: [themeDecorator]

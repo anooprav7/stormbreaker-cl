@@ -1,17 +1,14 @@
 import React, {useState} from 'react';
-import theme, { colorKeys } from '../theme';
+import { colorKeys } from '../theme';
 import Switch from '../components/Switch';
 import themeDecorator from './themeDecorator';
-import Text from '../components/Typography';
 import Box from '../layout/Box';
 
 export default {
-	title: 'Switch',
+	title: 'components/Switch',
 	component: Switch,
 	decorators: [themeDecorator]
 };
-
-
 
 export const Showcase = () => {
 	const [on, setOn] = useState(false);

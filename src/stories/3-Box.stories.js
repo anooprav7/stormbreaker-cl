@@ -1,12 +1,12 @@
 import React from 'react';
-import Box from '../components/Box';
+import Box from '../layout/Box';
 import Text from '../components/Typography';
 import themeDecorator from './themeDecorator';
 
 import theme, {colorKeys} from '../theme';
 
 export default {
-	title: 'Box',
+	title: 'layout/Box',
 	component: Box,
 	decorators: [themeDecorator]
 };

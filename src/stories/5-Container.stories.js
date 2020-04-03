@@ -1,14 +1,14 @@
 import React from 'react';
-import Box from '../components/Box';
+import Box from '../layout/Box';
 import Text from '../components/Typography';
-import Grid from '../components/Grid';
-import Container from '../components/Container';
+import Grid from '../layout/Grid';
+import Container from '../layout/Container';
 import themeDecorator from './themeDecorator';
 
 import theme from '../theme';
 
 export default {
-	title: 'Container',
+	title: 'layout/Container',
 	component: Container,
 	decorators: [themeDecorator]
 };

@@ -1,12 +1,12 @@
 import React from 'react';
-import theme, { colorKeys } from '../theme';
+import { colorKeys } from '../theme';
 import Checkbox from '../components/Checkbox';
 import themeDecorator from './themeDecorator';
 import Text from '../components/Typography';
-import Box from '../components/Box';
+import Box from '../layout/Box';
 
 export default {
-	title: 'Checkbox',
+	title: 'components/Checkbox',
 	component: Checkbox,
 	decorators: [themeDecorator]
 };
