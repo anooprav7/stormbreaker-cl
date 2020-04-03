@@ -8,18 +8,7 @@ import "@storybook/addon-actions/register"
 
 import { theme } from "../src/theme"
 import { globalStyles } from "../src/theme/globalStyles"
-// import "../index.css"
 
-addParameters({
-  options: {
-    theme: create({
-      brandTitle: "Stormbreaker",
-      brandUrl: "https://github.com/anooprav7/stormbreaker-cl",
-      base: "light"
-    }),
-    panelPosition: "right"
-  }
-})
 
 const ThemeDecorator = storyFn => (
   <ThemeProvider theme={theme}>
