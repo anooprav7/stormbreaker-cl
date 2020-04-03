@@ -2,13 +2,13 @@ import React from "react"
 import { action } from "@storybook/addon-actions"
 import { withInfo } from "@storybook/addon-info"
 
-import Button from "../components/Button"
-import TextInput from "../components/TextInput"
+import Button from "../src/components/Button"
+import TextInput from "../src/components/TextInput"
 import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
 
 export default {
-  title: "TextInput",
+  title: "components/TextInput",
   component: TextInput,
   // decorators: [withInfo, themeDecorator]
   decorators: [themeDecorator]

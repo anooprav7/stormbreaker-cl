@@ -6,8 +6,8 @@ import { create } from "@storybook/theming"
 import "@storybook/addon-knobs/register"
 import "@storybook/addon-actions/register"
 
-import { theme } from "../theme"
-import { globalStyles } from "../theme/globalStyles"
+import { theme } from "../src/theme"
+import { globalStyles } from "../src/theme/globalStyles"
 // import "../index.css"
 
 addParameters({
@@ -23,7 +23,7 @@ addParameters({
 
 const ThemeDecorator = storyFn => (
   <ThemeProvider theme={theme}>
-    <Global styles={globalStyles}>{storyFn()}</Global>
+    <Global styles={globalStyles} /> {storyFn()}
   </ThemeProvider>
 )
 

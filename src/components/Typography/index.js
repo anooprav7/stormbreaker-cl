@@ -8,7 +8,7 @@ const styles = {
     if (props.color === "white" || props.color === "white") {
       return props.theme.colors[props.color]
     } else if (props.color) {
-      return props.theme.colors[props.color][props.colorLevel]
+      return props.theme.colors[props.color]
     }
     return ""
   },
