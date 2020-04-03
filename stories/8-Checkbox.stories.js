@@ -1,14 +1,14 @@
 import React from "react"
 import { colorKeys } from "../src/theme"
 import Checkbox from "../src/components/Checkbox"
-import themeDecorator from "./themeDecorator"
+import { defaultDecoratorArr } from "./themeDecorator"
 import Text from "../src/components/Typography"
 import Box from "../src/layout/Box"
 
 export default {
   title: "components/Checkbox",
   component: Checkbox,
-  decorators: [themeDecorator]
+  decorators: defaultDecoratorArr,
 }
 
 export const Showcase = () => (
@@ -21,7 +21,7 @@ export const Showcase = () => (
 
 export const Appearance = () => (
   <Box display="flex">
-    {colorKeys.map(color => (
+    {colorKeys.map((color) => (
       <>
         <Checkbox appearance={color}>{color}</Checkbox>
         <Box mr={4} />

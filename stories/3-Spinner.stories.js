@@ -1,17 +1,12 @@
 import React from "react"
-import { action } from "@storybook/addon-actions"
-import { withInfo } from "@storybook/addon-info"
-
-// import { Button } from "@storybook/react/demo"
 import { Spinner } from "../src/components/Spinner"
-import themeDecorator from "./themeDecorator"
-import styled from "@emotion/styled"
+import { defaultDecoratorArr } from "./themeDecorator"
 
 export default {
   title: "components/Spinner",
   component: Spinner,
   // decorators: [withInfo, themeDecorator]
-  decorators: [themeDecorator]
+  decorators: defaultDecoratorArr,
 }
 
 export const Showcase = () => (

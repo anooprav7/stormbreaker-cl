@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import { colorKeys } from "../src/theme"
 import Switch from "../src/components/Switch"
-import themeDecorator from "./themeDecorator"
+import { defaultDecoratorArr } from "./themeDecorator"
 import Box from "../src/layout/Box"
 
 export default {
   title: "components/Switch",
   component: Switch,
-  decorators: [themeDecorator]
+  decorators: defaultDecoratorArr,
 }
 
 export const Showcase = () => {
@@ -27,7 +27,7 @@ export const Sizes = () => (
 
 export const Appearance = () => (
   <Box display="flex" alignItems="center">
-    {colorKeys.map(color => (
+    {colorKeys.map((color) => (
       <>
         <Switch on appearance={color} />
         <Box mr={4} />

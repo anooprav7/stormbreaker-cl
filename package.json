@@ -17,7 +17,7 @@
     "build": "yarn build.preBuild && yarn build.babel && yarn build.babelEs6",
     "storybook": "start-storybook -p 9007 -s public",
     "storybook.docs": "start-storybook -p 9007 -s public --docs",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s public",
     "build-storybook.docs": "build-storybook --docs"
   },
   "keywords": [
@@ -65,20 +65,21 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
+    "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-info": "^5.3.17",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "babel-loader": "^8.1.0",
-    "cli-msg": "^1.0.0",
-    "rimraf": "^3.0.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@storybook/addon-info": "^5.3.17"
+    "babel-loader": "^8.1.0",
+    "cli-msg": "^1.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2"
   }
 }
