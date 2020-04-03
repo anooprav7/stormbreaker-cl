@@ -3,7 +3,7 @@ import { action } from "@storybook/addon-actions"
 import { withInfo } from "@storybook/addon-info"
 
 // import { Button } from "@storybook/react/demo"
-import Spinner from "../components/Spinner"
+import { Spinner } from "../components/Spinner"
 import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
 

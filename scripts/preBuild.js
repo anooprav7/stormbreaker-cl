@@ -19,12 +19,12 @@ nl(1)
 rimraf.sync(BUILD_OUTPUT_FOLDER)
 fs.mkdirSync(BUILD_OUTPUT_FOLDER)
 
-const filesToCopy = ["package.json", "README.md"]
+const FILES_TO_COPY = ["package.json", "README.md"]
 
-filesToCopy.forEach((file, index) => {
+FILES_TO_COPY.forEach((file, index) => {
   fs.copyFileSync(file, `${BUILD_OUTPUT_FOLDER}/${file}`)
   success.wb(`${file} copied`)
-  if (index === filesToCopy.length - 1) getComponentDirectories()
+  if (index === FILES_TO_COPY.length - 1) getComponentDirectories()
 })
 
 // Create the main index.js file
@@ -33,7 +33,7 @@ function getComponentDirectories() {
   let importStrings = []
   let componentNames = []
 
-  const directoriesToCopyFrom = ["components"]
+  const directoriesToCopyFrom = ["components", "layout"]
 
   directoriesToCopyFrom.forEach((directory, index) => {
     let folderNames = getDirectories(`${LIB_ROOT}/${directory}`)
@@ -43,8 +43,11 @@ function getComponentDirectories() {
       importStrings.push(`export * from './${directory}/${componentName}';`)
       componentNames.push(`${componentName}`)
     })
-    if (index === directoriesToCopyFrom.length - 1)
+    if (index === directoriesToCopyFrom.length - 1) {
+      importStrings.push(`export * from './theme';`)
+      importStrings.push(`export * from './theme/globalStyles';`)
       generateMainIndexFile(importStrings, componentNames)
+    }
   })
 }
 

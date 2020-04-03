@@ -1,8 +1,5 @@
-import theme from "../../theme"
-import {
-  getColorFromAppearance,
-  getColorFromTheme
-} from "../../utils/stylesHelper"
+import { theme } from "../../theme"
+import { getColorFromAppearance } from "../../utils/stylesHelper"
 
 const { sizeOfSpace } = theme
 
@@ -11,6 +8,8 @@ const SIZE_PADDING_MAP = {
   medium: sizeOfSpace([2, 4]),
   large: sizeOfSpace([3, 6])
 }
+
+// TODO Anoop - Remove and replace theme import
 
 export default {
   opacity(props) {

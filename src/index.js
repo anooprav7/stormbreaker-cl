@@ -4,4 +4,8 @@ export * from './components/Container';
 export * from './components/Grid';
 export * from './components/Spinner';
 export * from './components/TextInput';
+export * from './components/ThemeProvider';
 export * from './components/Typography';
+export * from './layout/Box';
+export * from './layout/Flex';
+export * from './theme';

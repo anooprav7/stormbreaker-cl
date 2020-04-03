@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import Spinner from "../Spinner"
+import { Spinner } from "../Spinner"
 
 import styles from "./styles"
 
@@ -101,7 +101,7 @@ Button.defaultProps = {
   block: false
 }
 
-export default Button
+export { Button }
 
 /**
  * Props

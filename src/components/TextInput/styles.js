@@ -1,4 +1,4 @@
-import theme from "../../theme"
+import { theme } from "../../theme"
 import { getColorFromAppearance } from "../../utils/stylesHelper"
 
 const { sizeOfSpace } = theme

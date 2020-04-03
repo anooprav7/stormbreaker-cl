@@ -91,4 +91,4 @@ Spinner.defaultProps = {
   color: "primary500"
 }
 
-export default Spinner
+export { Spinner }
