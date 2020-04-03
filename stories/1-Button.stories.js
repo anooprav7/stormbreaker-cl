@@ -1,16 +1,15 @@
 import React from "react"
-import { action } from "@storybook/addon-actions"
-import { withInfo } from "@storybook/addon-info"
 
 import { Button } from "../src/components/Button"
-import themeDecorator from "./themeDecorator"
-import styled from "@emotion/styled"
+import { defaultDecoratorArr } from "./themeDecorator"
+import Box from "../src/layout/Box"
+import Text from "../src/components/Typography"
 
 export default {
   title: "components/Button",
   component: Button,
   // decorators: [withInfo, themeDecorator]
-  decorators: [themeDecorator]
+  decorators: defaultDecoratorArr,
 }
 
 export const Showcase = () => (
@@ -69,11 +68,6 @@ export const BlockButton = () => <Button block>{"Block"}</Button>
 
 export const Loading = () => (
   <>
-    <div style={{ color: "#2f2f2f" }}>
-      While loading state is applied, we change the font color to match bg color
-      to maintain same width
-    </div>
-    <div style={{ margin: 5 }} />
     <Button loading>{"Primary"}</Button>
     <span style={{ padding: 5 }} />
     <Button loading appearance="accent">
@@ -91,6 +85,13 @@ export const Loading = () => (
     <Button loading appearance="error">
       {"Error"}
     </Button>
+    <div style={{ margin: 10 }} />
+    <Box display="inline-flex" bg="mono100" borderRadius={4} px={3} py={1}>
+      <Text variant="body1" color="mono800">
+        NOTE: While loading state is applied, we change the font color to match
+        bg color to maintain same width
+      </Text>
+    </Box>
   </>
 )
 
