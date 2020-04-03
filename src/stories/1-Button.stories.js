@@ -7,7 +7,7 @@ import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
 
 export default {
-  title: "Button",
+  title: "components/Button",
   component: Button,
   // decorators: [withInfo, themeDecorator]
   decorators: [themeDecorator]

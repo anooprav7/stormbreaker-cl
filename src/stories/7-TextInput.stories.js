@@ -8,7 +8,7 @@ import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
 
 export default {
-  title: "TextInput",
+  title: "components/TextInput",
   component: TextInput,
   // decorators: [withInfo, themeDecorator]
   decorators: [themeDecorator]
