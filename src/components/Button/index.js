@@ -18,7 +18,7 @@ let StyledButton = styled(
   color: ${styles.color};
   font-size: 12px;
   padding: ${styles.padding};
-  width: ${props => (props.block ? "100%" : "")};
+  width: ${(props) => (props.block ? "100%" : "")};
   border-width: 1px;
   border-style: solid;
   border-color: ${styles.borderColor};
@@ -90,7 +90,7 @@ Button.propTypes = {
   /** Loading state */
   loading: PropTypes.bool,
   /** Anchor button to redirection to href */
-  href: PropTypes.string
+  href: PropTypes.string,
 }
 
 Button.defaultProps = {
@@ -98,7 +98,7 @@ Button.defaultProps = {
   size: "medium",
   loading: false,
   outline: false,
-  block: false
+  block: false,
 }
 
 export { Button }

@@ -1,14 +1,9 @@
-import { theme } from "../../theme"
-import {
-  getColorFromAppearance,
-  getColorFromTheme
-} from "../../utils/stylesHelper"
-const { sizeOfSpace } = theme
+import { getColorFromTheme } from "../../utils/stylesHelper"
 
 const SIZE_MAP = {
-  small: { size: sizeOfSpace(3), strokeWidth: "1px" },
-  medium: { size: sizeOfSpace(6), strokeWidth: "2px" },
-  large: { size: sizeOfSpace(9), strokeWidth: "3px" }
+  small: { size: 3, strokeWidth: "1px" },
+  medium: { size: 6, strokeWidth: "2px" },
+  large: { size: 9, strokeWidth: "3px" },
 }
 
 export default {
@@ -19,6 +14,6 @@ export default {
     )}`
   },
   size(props) {
-    return SIZE_MAP[props.size].size
-  }
+    return props.theme.sizeOfSpace(SIZE_MAP[props.size].size)
+  },
 }

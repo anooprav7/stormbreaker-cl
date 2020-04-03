@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import styles from "./styles"
-import { colorKeys } from "../../theme"
 
 /** @jsx jsx */
 import { jsx, css, keyframes } from "@emotion/core"
@@ -83,12 +82,12 @@ Spinner.propTypes = {
   /** The size of the button */
   size: PropTypes.oneOf(["small", "medium", "large"]),
   /** Theme color or CSS valid color string */
-  color: PropTypes.string
+  color: PropTypes.string,
 }
 
 Spinner.defaultProps = {
   size: "medium",
-  color: "primary500"
+  color: "primary500",
 }
 
 export { Spinner }

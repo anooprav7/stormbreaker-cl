@@ -1,12 +1,9 @@
-import { theme } from "../../theme"
 import { getColorFromAppearance } from "../../utils/stylesHelper"
 
-const { sizeOfSpace } = theme
-
 const SIZE_PADDING_MAP = {
-  small: sizeOfSpace([1, 2]),
-  medium: sizeOfSpace([2, 4]),
-  large: sizeOfSpace([3, 6])
+  small: [1, 2],
+  medium: [2, 4],
+  large: [3, 6],
 }
 
 // TODO Anoop - Remove and replace theme import
@@ -37,7 +34,7 @@ export default {
     return getColorFromAppearance(theme, appearance, 500)
   },
   padding(props) {
-    return SIZE_PADDING_MAP[props.size]
+    return props.theme.sizeOfSpace(SIZE_PADDING_MAP[props.size])
   },
   hover: {
     backgroundColor(props) {
@@ -55,6 +52,6 @@ export default {
       const { theme, appearance } = props
       if (props.outline) return getColorFromAppearance(theme, appearance, 700)
       return props.theme.colors.white
-    }
-  }
+    },
+  },
 }
