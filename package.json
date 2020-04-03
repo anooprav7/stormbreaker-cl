@@ -1,8 +1,41 @@
 {
-  "name": "stormbreaker-cl",
-  "version": "0.1.0",
-  "private": true,
+  "name": "stormbreaker",
+  "version": "0.2.0",
+  "description": "Stormbreaker React Component Library",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9007 -s public",
+    "storybook.docs": "start-storybook -p 9007 -s public --docs",
+    "build-storybook": "build-storybook",
+    "build-storybook.docs": "build-storybook --docs"
+  },
+  "keywords": [
+    "stormbreaker",
+    "react",
+    "react component library"
+  ],
+  "contributors": [
+    {
+      "name": "Anoop Raveendran",
+      "email": "anooprav7@gmail.com",
+      "url": "https://anooprav7.com"
+    },
+    {
+      "name": "Nabeel Thurakkal",
+      "email": "nthurakkal92@gmail.com",
+      "url": "https://github.com/thurakkal92"
+    }
+  ],
+  "bugs": "https://github.com/anooprav7/stormbreaker/issues",
+  "author": "anooprav7@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anooprav7/stormbreaker.git"
+  },
   "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@storybook/addon-info": "^5.3.17",
@@ -12,41 +45,16 @@
     "@testing-library/user-event": "^7.1.2",
     "emotion-theming": "^10.0.27",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
     "styled-system": "^5.1.5"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.17",
-    "@storybook/addon-docs": "^5.3.17",
-    "@storybook/addon-knobs": "^5.3.17",
-    "@storybook/addon-links": "^5.3.17",
-    "@storybook/addons": "^5.3.17",
-    "@storybook/preset-create-react-app": "^2.1.1",
-    "@storybook/react": "^5.3.17"
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18"
   }
 }
