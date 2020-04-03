@@ -1,16 +1,15 @@
-import theme from "../../theme"
+import { theme } from "../../theme"
 import { getColorFromAppearance } from "../../utils/stylesHelper"
 
-const { sizeOfSpace } = theme
 const SIZE_MAP = {
-  small: sizeOfSpace([1, 2]),
-  medium: sizeOfSpace([2, 3]),
-  large: sizeOfSpace([3, 4])
+  small: [1, 2],
+  medium: [2, 3],
+  large: [3, 4],
 }
 const FONT_SIZE_IDX_MAP = {
   small: 2,
   medium: 3,
-  large: 4
+  large: 4,
 }
 export default {
   backgroundColor(props) {
@@ -34,7 +33,7 @@ export default {
     return getColorFromAppearance(theme, "mono", 600)
   },
   padding(props) {
-    return SIZE_MAP[props.size]
+    return props.theme.sizeOfSpace(SIZE_MAP[props.size])
   },
   border(props) {
     const { theme } = props
@@ -56,6 +55,6 @@ export default {
           400
         )} 0px 0px 0px 1px`
       return ""
-    }
-  }
+    },
+  },
 }

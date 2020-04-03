@@ -1,8 +1,8 @@
 import React from "react"
-import Text from "../components/Typography"
+import Text from "../src/components/Typography"
 import themeDecorator from "./themeDecorator"
 
-import theme, {colorKeys} from "../theme"
+import { theme, colorKeys } from "../src/theme"
 
 export default {
   title: "components/Typography",

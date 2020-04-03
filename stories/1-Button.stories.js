@@ -2,7 +2,7 @@ import React from "react"
 import { action } from "@storybook/addon-actions"
 import { withInfo } from "@storybook/addon-info"
 
-import Button from "../components/Button"
+import { Button } from "../src/components/Button"
 import themeDecorator from "./themeDecorator"
 import styled from "@emotion/styled"
 
