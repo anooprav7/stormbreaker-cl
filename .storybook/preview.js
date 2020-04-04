@@ -1,6 +1,5 @@
 import { addParameters } from '@storybook/react';
 import { create } from "@storybook/theming"
-import {theme} from  '../src/theme'
 
 
 addParameters({
@@ -16,6 +15,5 @@ addParameters({
     showCanvas: false
   }
 })
-
 
 

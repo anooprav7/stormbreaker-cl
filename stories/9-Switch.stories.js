@@ -27,9 +27,9 @@ export const Sizes = () => (
 
 export const Appearance = () => (
   <Box display="flex" alignItems="center">
-    {colorKeys.map((color) => (
+    {colorKeys.map((color,i) => (
       <>
-        <Switch on appearance={color} />
+        <Switch on appearance={color} key={i}/>
         <Box mr={4} />
       </>
     ))}
