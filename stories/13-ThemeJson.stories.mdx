@@ -1,0 +1,224 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks"
+import { theme } from "../src/theme"
+
+<Meta title="Theme/JSON"  />
+
+# Default theme
+
+<br />
+
+```js dark
+{
+  colors: {
+    white: "#FFFFFF",
+    black: "#000000",
+    primary50: "#E1F5FE",
+    primary100: "#B3E5FC",
+    primary200: "#81D4FA",
+    primary300: "#4FC3F7",
+    primary400: "#29B6F6",
+    primary500: "#03A9F4",
+    primary: "#03A9F4",
+    primary600: "#039BE5",
+    primary700: "#0288D1",
+    primary800: "#0277BD",
+    primary900: "#01579B",
+    accent50: "#f9eae8",
+    accent100: "#fbcfbe",
+    accent200: "#fab195",
+    accent300: "#f8946a",
+    accent400: "#f77e49",
+    accent500: "#f66a29",
+    accent: "#f66a29",
+    accent600: "#eb6425",
+    accent700: "#dd5d21",
+    accent800: "#cf561e",
+    accent900: "#b64a19",
+    success50: "#e5f8e9",
+    success100: "#c1edca",
+    success200: "#96e1a7",
+    success300: "#65d683",
+    success400: "#33cc66",
+    success500: "#00c248",
+    success: "#00c248",
+    success600: "#00b23f",
+    success700: "#009f32",
+    success800: "#008e25",
+    success900: "#006e10",
+    warning50: "#fff8e1",
+    warning100: "#ffecb3",
+    warning200: "#ffe082",
+    warning300: "#ffd54f",
+    warning400: "#ffca28",
+    warning500: "#ffc107",
+    warning: "#ffc107",
+    warning600: "#ffb300",
+    warning700: "#ffa000",
+    warning800: "#ff8f00",
+    warning900: "#ff6f00",
+    error50: "#FFEBEE",
+    error100: "#FFCDD2",
+    error200: "#EF9A9A",
+    error300: "#E57373",
+    error400: "#EF5350",
+    error500: "#F44336",
+    error: "#F44336",
+    error600: "#E53935",
+    error700: "#D32F2F",
+    error800: "#C62828",
+    error900: "#B71C1C",
+    mono50: "#F7F7F7",
+    mono100: "#E6E6E6",
+    mono200: "#CCCCCC",
+    mono300: "#B3B3B3",
+    mono400: "#999999",
+    mono500: "#808080",
+    mono: "#808080",
+    mono600: "#666666",
+    mono700: "#4D4D4D",
+    mono800: "#333333",
+    mono900: "#1A1A1A"
+  },
+  fontSizes: [
+    0,
+    "10px",
+    "12px",
+    "14px",
+    "16px",
+    "20px",
+    "24px",
+    "32px",
+    "36px",
+    "48px"
+  ],
+  typographyVariants: {
+    h1: {
+      size: "48px",
+      lineHeight: "56px",
+      as: "h1"
+    },
+    h2: {
+      size: "36px",
+      lineHeight: "48px",
+      as: "h2"
+    },
+    h3: {
+      size: "32px",
+      lineHeight: "44px",
+      as: "h3"
+    },
+    h4: {
+      size: "24px",
+      lineHeight: "32px",
+      as: "h4"
+    },
+    body3: {
+      size: "20px",
+      lineHeight: "28px",
+      as: "p"
+    },
+    body2: {
+      size: "16px",
+      lineHeight: "20px",
+      as: "p"
+    },
+    body1: {
+      size: "14px",
+      lineHeight: "20px",
+      as: "p"
+    },
+    caption2: {
+      size: "12px",
+      lineHeight: "16px",
+      as: "div"
+    },
+    caption1: {
+      size: "10px",
+      lineHeight: "12px",
+      as: "div"
+    }
+  },
+  lineHeight: {
+    solid: 1,
+    title: 1.25,
+    copy: 1.5
+  },
+  fontWeight: {
+    lighter: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700
+  },
+  letterSpacing: {
+    tight: "-1px",
+    normal: "0px",
+    wide: "1px"
+  },
+  zIndex: [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100
+  ],
+  sizeOfSpace: value=>{
+    constvalues=[
+      
+    ].concat(value)returnvalues.map(v=>(typeofv==="string"?v: `${
+      v*SCALE
+    }px`)).join(" ")
+  },
+  gridColumns: [
+    12,
+    24
+  ],
+  shadows: {
+    0: "none",
+    1: "rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px",
+    2: "rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px",
+    3: "rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px"
+  },
+  space: [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    64,
+    68,
+    72,
+    76,
+    80,
+    84,
+    88,
+    92,
+    96,
+    100,
+    104,
+    108,
+    112,
+    116,
+    120
+  ]
+}
+```
+

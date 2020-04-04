@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import { theme } from "../src/theme"
-import {Switch} from "../src/components/Switch"
-import { defaultDecoratorArr } from "./themeDecorator"
+import { theme } from "../../src/theme"
+import { defaultDecoratorArr, withTheme } from "../themeDecorator"
 import styled from "@emotion/styled"
 
-export default {
-  title: "theme/Colors",
-  component: Switch,
-  decorators: defaultDecoratorArr,
-}
+// export default {
+//   title: "theme/Colors",
+//   component: Switch,
+//   decorators: defaultDecoratorArr,
+// }
 
 const copyToClipboard = (str) => {
   const el = document.createElement("textarea")
@@ -27,36 +26,37 @@ const Wrapper = styled.div`
   border-top: none;
   height: ${(props) => props.theme.sizeOfSpace(32)};
   width: ${(props) => props.theme.sizeOfSpace(32)};
-  display: flex;
-  /* justify-content: center; */
+  display: flex; /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   border-radius: 7px;
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.22);
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transform: ${(props) => (props.flat ? "" : "scale(1.05)")};
   }
 `
 
-const ColorBlock = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.mono100};
-  background-color: ${(props) => props.color};
-  height: ${(props) => props.theme.sizeOfSpace(21)};
-  /* width: ${(props) => props.theme.sizeOfSpace(17)}; */
-  width: 100%;
-  border-radius: 7px 7px 0px 0px;
-  /* border-radius: 50%; */
-`
+const ColorBlock = styled.div`border: 1px solid ${(props) =>
+  props.theme.colors.mono100}; background-color: ${(props) =>
+  props.color}; height: ${(props) => props.theme.sizeOfSpace(21)}; /* width: ${(
+  props
+) =>
+  props.theme.sizeOfSpace(
+    17
+  )}; */ width: 100%; border-radius: 7px 7px 0px 0px; /* border-radius: 50%; */`
 
 const Title = styled.div`
   font-size: ${(props) => props.theme.fontSizes[3]};
   margin-top: ${(props) => props.theme.sizeOfSpace(1)};
+  color: ${(props) => props.theme.colors.mono700};
 `
 const SubTitle = styled.div`
   font-size: ${(props) => props.theme.fontSizes[2]};
+  color: ${(props) => props.theme.colors.mono300};
 `
 
 const ThemeColorItem = (props) => {
@@ -86,8 +86,8 @@ const Container = styled.div`
 `
 const SectionTitle = styled.div`
   width: 100%;
-  margin: 10px;
-  font-size: ${(props) => props.theme.fontSizes[8]};
+  margin: 32px 4px 4px 4px;
+  font-size: ${(props) => props.theme.fontSizes[7]};
 `
 
 const ColorList = Object.keys(theme.colors).map((item, idx) => {
@@ -107,7 +107,7 @@ const ColorList = Object.keys(theme.colors).map((item, idx) => {
   return ColorItem
 })
 
-export const Showcase = () => {
+export const ThemeColorsWrapper = () => {
   return (
     <Container>
       <SectionTitle>Base Colors</SectionTitle>
@@ -115,3 +115,5 @@ export const Showcase = () => {
     </Container>
   )
 }
+
+export const ThemeColors = withTheme(ThemeColorsWrapper)

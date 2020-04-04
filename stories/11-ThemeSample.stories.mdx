@@ -1,0 +1,49 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks"
+// import { Button } from "../src/components/Button"
+import { Description } from '@storybook/addon-docs/blocks';
+import { Button } from "@storybook/react/demo"
+import { ThemeProvider } from "emotion-theming"
+import { Global } from "@emotion/core"
+import { theme } from "../src/theme"
+import { globalStyles, globalStylesCss } from "../src/theme/globalStyles"
+import { defaultDecoratorArr } from "./themeDecorator"
+
+<Meta title="Theme/GlobalStyles" decorators={defaultDecoratorArr} />
+
+# Global Styles
+
+<br />
+
+## Sample Usage
+
+```jsx padded dark
+import { ThemeProvider, Global, theme, globalStyles } from "stormbreaker"
+
+<ThemeProvider theme={theme}>
+  <Global styles={globalStyles} />
+  // Code Here
+</ThemeProvider>
+```
+
+## globalStyles
+
+```css dark {globalStyles}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+```
