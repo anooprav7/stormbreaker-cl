@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
-import Box from '../Box';
+import {Box} from '../Box';
 
 let StyledContainer = styled(({ gap, direction, wrap, ...props }) => (
 	<Box
@@ -37,4 +37,4 @@ Container.defaultProps = {
 	wrap: true
 };
 
-export default Container;
+export {Container};

@@ -1,16 +1,16 @@
 import React from "react"
-import Box from "../src/layout/Box"
-import Text from "../src/components/Typography"
-import Grid from "../src/layout/Grid"
-import Container from "../src/layout/Container"
-import themeDecorator from "./themeDecorator"
+import {Box} from "../src/layout/Box"
+import {Text} from "../src/components/Typography"
+import {Grid} from "../src/layout/Grid"
+import {Container} from "../src/layout/Container"
+import { defaultDecoratorArr } from "./themeDecorator"
 
 // import theme from '../theme';
 
 export default {
   title: "layout/Grid",
   component: Grid,
-  decorators: [themeDecorator]
+  decorators: defaultDecoratorArr,
 }
 
 export const Showcase = () => (

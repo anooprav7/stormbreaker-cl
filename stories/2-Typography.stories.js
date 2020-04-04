@@ -1,13 +1,13 @@
 import React from "react"
-import Text from "../src/components/Typography"
-import themeDecorator from "./themeDecorator"
+import {Text} from "../src/components/Typography"
+import { defaultDecoratorArr } from "./themeDecorator"
 
 import { theme, colorKeys } from "../src/theme"
 
 export default {
   title: "components/Typography",
   component: Text,
-  decorators: [themeDecorator]
+  decorators: defaultDecoratorArr,
 }
 
 export const variant = () => (

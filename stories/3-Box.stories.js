@@ -1,14 +1,14 @@
 import React from "react"
-import Box from "../src/layout/Box"
-import Text from "../src/components/Typography"
-import themeDecorator from "./themeDecorator"
+import {Box} from "../src/layout/Box"
+import {Text} from "../src/components/Typography"
+import { defaultDecoratorArr } from "./themeDecorator"
 
 import { theme, colorKeys } from "../src/theme"
 
 export default {
   title: "layout/Box",
   component: Box,
-  decorators: [themeDecorator]
+  decorators: defaultDecoratorArr,
 }
 
 export const Showcase = () => (
@@ -33,7 +33,7 @@ export const Showcase = () => (
 export const ThemeColors = () => (
   <>
     <Box display="flex">
-      {colorKeys.map(color => (
+      {colorKeys.map((color) => (
         <Box
           display="flex"
           alignItems="center"

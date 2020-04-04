@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
-import Box from "../Box"
+import {Box} from "../Box"
 import { theme } from "../../theme"
 
 let StyledGrid = styled(({ gap, span, ...props }) => (
@@ -27,4 +27,4 @@ Grid.defaultProps = {
   span: 12
 }
 
-export default Grid
+export {Grid}

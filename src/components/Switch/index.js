@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import styles from './styles';
-import { getColorFromAppearance } from '../../utils/stylesHelper';
 
 const Wrapper = styled('label')`
 	border-radius: 30px;
@@ -12,9 +11,9 @@ const Wrapper = styled('label')`
 	pointer-events: ${styles.pointerEvents};
 	opacity: ${props => (props.disabled ? 0.5 : 1)};
 	border: 2px solid;
-	border-color: ${styles.inActiveColor};
+	border-color: ${styles.colors};
 	transition: background-color 0.3s ease-in-out, border-color 0.2s ease-in-out;
-	background-color: ${styles.inActiveColor};
+	background-color: ${styles.colors};
 	display: inline-flex;
 `;
 
@@ -25,32 +24,23 @@ const StyledKnob = styled('span')`
 	background-color: white;
 	transition: transform 0.2s ease-in-out;
 	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25), 0 4px 11px 0 rgba(0, 0, 0, 0.08), -1px 3px 3px 0 rgba(0, 0, 0, 0.14);
-`;
+	transform: ${props => props.on ? 'translateX(100%)': ''}
+	`;
 
 const StyledInput = styled('input')`
 	height: 0;
 	width: 0;
 	opacity: 0;
 	z-index: -1;
-	&:checked + ${Wrapper} {
-		background-color: ${styles.activeColor};
-		border-color: ${styles.activeColor};
-	}
-
-	&:checked + ${Wrapper} > ${StyledKnob} {
-		transform: translateX(100%);
-	}
 `;
 
 function Switch(props) {
-	const { on, ...remainingProps } = props;
+	const { on, size, appearance, disabled, ...remainingProps } = props;
 	return (
-		<>
-			<StyledInput checked={on} id='switch' type='checkbox' {...remainingProps} />
-			<Wrapper htmlFor='switch' {...remainingProps}>
-				<StyledKnob {...remainingProps} />
-			</Wrapper>
-		</>
+		<Wrapper disabled={disabled} on={on} appearance={appearance} size={size}>
+			<StyledInput checked={on}  role="switch"  type='checkbox' {...remainingProps} />
+			<StyledKnob on={on} size={size} {...remainingProps}/>
+		</Wrapper>
 	);
 }
 
@@ -74,4 +64,4 @@ Switch.defaultProps = {
 	onChange: () => {}
 };
 
-export default Switch;
+export {Switch};
