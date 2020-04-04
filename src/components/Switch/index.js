@@ -32,6 +32,7 @@ const StyledInput = styled('input')`
 	width: 0;
 	opacity: 0;
 	z-index: -1;
+	visibility: collapse;
 `;
 
 function Switch(props) {
