@@ -19,7 +19,6 @@ export default {
     return "pointer"
   },
   borderColor(props) {
-    // return props.theme.colors[props.appearance][400]
     const { theme, appearance } = props
     return getColorFromAppearance(theme, appearance, 500)
   },

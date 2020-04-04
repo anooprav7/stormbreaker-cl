@@ -7,11 +7,15 @@ import "@storybook/addon-knobs/register"
 import "@storybook/addon-actions/register"
 // import "@storybook/addon-a11y/register"
 import { withA11y } from "@storybook/addon-a11y"
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
 
 import { theme } from "../src/theme"
 import { globalStyles } from "../src/theme/globalStyles"
 
 addParameters({
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  },
   options: {
     theme: create({
       brandTitle: "Stormbreaker",
@@ -20,6 +24,7 @@ addParameters({
       base: "light",
     }),
     panelPosition: "right",
+    // grid: { cellSize: 4 },
   },
 })
 

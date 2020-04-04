@@ -10,13 +10,12 @@ export default {
   component: Button,
   // decorators: [withInfo, themeDecorator]
   decorators: defaultDecoratorArr,
+  // parameters: {
+  //   grid: { cellSize: 4 },
+  // },
 }
 
-export const Showcase = () => (
-  <div style={{ margin: 10 }}>
-    <Button>{"Default"}</Button>
-  </div>
-)
+export const Showcase = () => <Button>{"Default"}</Button>
 
 export const Sizes = () => (
   <>
