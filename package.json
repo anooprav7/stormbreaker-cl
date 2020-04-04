@@ -42,9 +42,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anooprav7/stormbreaker.git"
+    "url": "https://github.com/anooprav7/stormbreaker-cl.git"
   },
-  "homepage": "https://stormbreaker.netlify.app/",
+  "homepage": "https://stormbreaker-v2.netlify.app/",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
