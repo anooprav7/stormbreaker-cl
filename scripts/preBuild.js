@@ -19,7 +19,7 @@ nl(1)
 rimraf.sync(BUILD_OUTPUT_FOLDER)
 fs.mkdirSync(BUILD_OUTPUT_FOLDER)
 
-const FILES_TO_COPY = ["package.json", "README.md"]
+const FILES_TO_COPY = ["package.json", "README.md", "LICENSE"]
 
 FILES_TO_COPY.forEach((file, index) => {
   fs.copyFileSync(file, `${BUILD_OUTPUT_FOLDER}/${file}`)
@@ -38,7 +38,7 @@ function getComponentDirectories() {
   directoriesToCopyFrom.forEach((directory, index) => {
     let folderNames = getDirectories(`${LIB_ROOT}/${directory}`)
 
-    folderNames.forEach(componentName => {
+    folderNames.forEach((componentName) => {
       // importStrings.push(`import ${componentName} from './${directory}/${componentName}';`);
       importStrings.push(`export * from './${directory}/${componentName}';`)
       componentNames.push(`${componentName}`)
@@ -60,7 +60,7 @@ function generateMainIndexFile(importStrings, componentNames) {
   log("Stormbreaker", `${componentNames.length} component folders detected`)
   nl(1)
   log.b(` FOLDERS `)
-  componentNames.forEach(name => {
+  componentNames.forEach((name) => {
     tab(1)
     log(name)
   })
