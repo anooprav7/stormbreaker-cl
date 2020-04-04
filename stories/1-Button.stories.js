@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Meta, Story, Preview, Description } from "@storybook/addon-docs/blocks"
 import { Button } from "../src/components/Button"
 import { defaultDecoratorArr } from "./themeDecorator"
 import Box from "../src/layout/Box"
@@ -10,12 +10,16 @@ export default {
   component: Button,
   // decorators: [withInfo, themeDecorator]
   decorators: defaultDecoratorArr,
+  // https://github.com/storybookjs/storybook/blob/e520afa6a3013175d8481b14e276b14253ac09da/examples/cra-kitchen-sink/.storybook/manager.js
   // parameters: {
   //   grid: { cellSize: 4 },
   // },
 }
 
 export const Showcase = () => <Button>{"Default"}</Button>
+export const Usage = () => (
+  <Description>{"import {Button} from 'stormbreaker';"}</Description>
+)
 
 export const Sizes = () => (
   <>

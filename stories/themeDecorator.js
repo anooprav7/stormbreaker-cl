@@ -34,6 +34,14 @@ const ThemeDecorator = (storyFn) => (
   </ThemeProvider>
 )
 
+const withTheme = (Component) => (props) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyles} /> <Component {...props} />
+    </ThemeProvider>
+  )
+}
+
 const defaultDecoratorArr = [ThemeDecorator, withA11y]
-export { defaultDecoratorArr }
+export { defaultDecoratorArr, withTheme }
 export default ThemeDecorator

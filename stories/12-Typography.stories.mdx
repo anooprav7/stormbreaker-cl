@@ -1,0 +1,90 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks"
+import { theme } from "../src/theme"
+
+<Meta title="Theme/Typography"  />
+
+# Typography
+
+
+```js dark
+{
+  fontSizes: [
+    0,
+    "10px",
+    "12px",
+    "14px",
+    "16px",
+    "20px",
+    "24px",
+    "32px",
+    "36px",
+    "48px"
+  ],
+  typographyVariants: {
+    h1: {
+      size: "48px",
+      lineHeight: "56px",
+      as: "h1"
+    },
+    h2: {
+      size: "36px",
+      lineHeight: "48px",
+      as: "h2"
+    },
+    h3: {
+      size: "32px",
+      lineHeight: "44px",
+      as: "h3"
+    },
+    h4: {
+      size: "24px",
+      lineHeight: "32px",
+      as: "h4"
+    },
+    body3: {
+      size: "20px",
+      lineHeight: "28px",
+      as: "p"
+    },
+    body2: {
+      size: "16px",
+      lineHeight: "20px",
+      as: "p"
+    },
+    body1: {
+      size: "14px",
+      lineHeight: "20px",
+      as: "p"
+    },
+    caption2: {
+      size: "12px",
+      lineHeight: "16px",
+      as: "div"
+    },
+    caption1: {
+      size: "10px",
+      lineHeight: "12px",
+      as: "div"
+    }
+  },
+  lineHeight: {
+    solid: 1,
+    title: 1.25,
+    copy: 1.5
+  },
+  fontWeight: {
+    lighter: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700
+  },
+  letterSpacing: {
+    tight: "-1px",
+    normal: "0px",
+    wide: "1px"
+  }
+}
+```
+

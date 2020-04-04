@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import { theme } from "../src/theme"
-import Switch from "../src/components/Switch"
-import { defaultDecoratorArr } from "./themeDecorator"
+import { theme } from "../../src/theme"
+import { defaultDecoratorArr, withTheme } from "../themeDecorator"
 import styled from "@emotion/styled"
 
-export default {
-  title: "theme/Colors",
-  component: Switch,
-  decorators: defaultDecoratorArr,
-}
+// export default {
+//   title: "theme/Colors",
+//   component: Switch,
+//   decorators: defaultDecoratorArr,
+// }
 
 const copyToClipboard = (str) => {
   const el = document.createElement("textarea")
@@ -27,8 +26,7 @@ const Wrapper = styled.div`
   border-top: none;
   height: ${(props) => props.theme.sizeOfSpace(32)};
   width: ${(props) => props.theme.sizeOfSpace(32)};
-  display: flex;
-  /* justify-content: center; */
+  display: flex; /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   border-radius: 7px;
@@ -42,15 +40,14 @@ const Wrapper = styled.div`
   }
 `
 
-const ColorBlock = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.mono100};
-  background-color: ${(props) => props.color};
-  height: ${(props) => props.theme.sizeOfSpace(21)};
-  /* width: ${(props) => props.theme.sizeOfSpace(17)}; */
-  width: 100%;
-  border-radius: 7px 7px 0px 0px;
-  /* border-radius: 50%; */
-`
+const ColorBlock = styled.div`border: 1px solid ${(props) =>
+  props.theme.colors.mono100}; background-color: ${(props) =>
+  props.color}; height: ${(props) => props.theme.sizeOfSpace(21)}; /* width: ${(
+  props
+) =>
+  props.theme.sizeOfSpace(
+    17
+  )}; */ width: 100%; border-radius: 7px 7px 0px 0px; /* border-radius: 50%; */`
 
 const Title = styled.div`
   font-size: ${(props) => props.theme.fontSizes[3]};
@@ -89,7 +86,7 @@ const Container = styled.div`
 `
 const SectionTitle = styled.div`
   width: 100%;
-  margin: 24px 4px 4px 4px;
+  margin: 32px 4px 4px 4px;
   font-size: ${(props) => props.theme.fontSizes[7]};
 `
 
@@ -110,7 +107,7 @@ const ColorList = Object.keys(theme.colors).map((item, idx) => {
   return ColorItem
 })
 
-export const Showcase = () => {
+export const ThemeColorsWrapper = () => {
   return (
     <Container>
       <SectionTitle>Base Colors</SectionTitle>
@@ -118,3 +115,5 @@ export const Showcase = () => {
     </Container>
   )
 }
+
+export const ThemeColors = withTheme(ThemeColorsWrapper)
