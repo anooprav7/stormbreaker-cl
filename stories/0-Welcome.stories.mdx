@@ -13,21 +13,21 @@ import {BoxDoc, ButtonDoc} from './jsFiles/welcome'
 
 <Meta title="welcome/Stormbreaker" decorators={defaultDecoratorArr}/>
 
-# Stormbreaker design system
+# Stormbreaker Component Library
 
-A design system for enterprise-level products. Create an efficient and enjoyable work experience.
+A sincere effort at creating a library of beautifully crafted components and creating pixel perfect websites an easy and enjoyable experience for developers. 
 
-<BoxDoc pt={10} />
+<BoxDoc pt={5} />
 
 <Container gap={15}>
   <Grid span={6}>
     <BoxDoc p={4} borderRadius={4} style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }}>
-      <Text variant="h4" fontWeight="bold">Basic setup</Text>
-      <Text variant="body2" pt={3} color="mono" fontWeight="light"> Stormbreaker is by start building an application using it. On this page, you’ll find a simple and a more complex app built using Stormbreaker components </Text>
+      <Text variant="h4" fontWeight="bold">Alpha release</Text>
+      <Text variant="body2" pt={3} color="mono" fontWeight="light"> Stormbreaker is still in its nascent stages. Please feel free to fork the repo, explore the code or raise issues on anything ranging from bugs to suggestions.</Text>
       <Box pt={6}/>
-      <Button appearance="primary" href='https://www.npmjs.com/package/stormbreaker'>Setup stormbreaker</Button>
+      <Button appearance="primary" href='https://github.com/anooprav7/stormbreaker-cl'>Github</Button>
     </BoxDoc>
   </Grid>
 </Container>
@@ -41,7 +41,7 @@ A design system for enterprise-level products. Create an efficient and enjoyable
 
 ### Using npm or yarn
 
-We recommend using npm or yarn to install, it not only makes development easier, but also allow you to take advantage of the rich ecosystem of Javascript packages and tooling.
+We recommend using npm or yarn to install `stormbreaker`
 
 ```js dark
 yarn add stormbreaker
@@ -56,13 +56,27 @@ npm install stormbreaker
 
 ## Usage
 
-<BoxDoc pt={10} />
+<BoxDoc pt={2} />
 
-We will show you how to include our component in to your system
+The components need a theme to be set through the `ThemeProvider` at the root level. We provide a default theme along with the components in the package named `theme` as shown below.
+We also provide some `globalStyles` styles in the package (Recommended).
+
+```jsx padded dark
+import { ThemeProvider, Global, theme, globalStyles } from "stormbreaker"
+
+export default () => (
+  <ThemeProvider theme={theme}>
+    <Global styles={globalStyles} />
+      // Code starts here Eg. <App />
+  </ThemeProvider>
+)
+```
+
+Then, to include components from `stormbreaker`
 
 ```js dark
-import {Button} from 'stormbreaker'
-import {Button, Box} from 'stormbreaker'
+import React from 'react'
+import { Button, Checkbox } from 'stormbreaker'
 ...
 
 ```
@@ -79,8 +93,8 @@ import {Button, Box} from 'stormbreaker'
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }}>
       <BoxDoc height={125} bg="mono100"/>
-      <Text color="mono900" fontWeight="bold" variant="body2" pt={3} pb={1} px={3}>Tree shakable</Text>
-      <Text color="mono700" fontWeight="light" variant="body2"  pb={3} px={3}>take advantage of the rich ecosystem of Javascript packages and tooling</Text>
+      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>Tree shakable</Text>
+      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>Empowers your bundler to add only the components you used to the final build.</Text>
     </BoxDoc>
   </Grid>
   <Grid span={4}>
@@ -88,8 +102,8 @@ import {Button, Box} from 'stormbreaker'
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} bg='success100' overflow="hidden">
       <BoxDoc height={125} bg="mono100"/>
-      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>Side effect free</Text>
-      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>take advantage of the rich ecosystem of Javascript packages and tooling</Text>
+      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>Minimal side effects</Text>
+      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>We make sure that we only have a small number of utils added to your final build</Text>
     </BoxDoc>
   </Grid>
   <Grid span={4}>
@@ -97,17 +111,48 @@ import {Button, Box} from 'stormbreaker'
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} bg='warning100' overflow="hidden">
       <BoxDoc height={125} bg="mono100"/>
-      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>Increase efficiency</Text>
-      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>take advantage of the rich ecosystem of Javascript packages and tooling</Text>
+      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>Detailed Documentation</Text>
+      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>Learn the best methods to leverage the components to create a pixel perfect UI</Text>
+    </BoxDoc>
+  </Grid>
+</Container>
+<Container gap={10} pt={4}>
+  <Grid span={4}>
+    <BoxDoc borderRadius={4} bg='accent100' overflow="hidden" style={{
+      boxShadow: "0 8px 20px rgba(143,168,191,.35)"
+    }}>
+      <BoxDoc height={125} bg="mono100"/>
+      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>Theme based approach</Text>
+      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>Provide the look and feel of your Brand easily by providing a custom theme token</Text>
+    </BoxDoc>
+  </Grid>
+  <Grid span={4}>
+    <BoxDoc style={{
+      boxShadow: "0 8px 20px rgba(143,168,191,.35)"
+    }} borderRadius={4} bg='error100' overflow="hidden">
+      <BoxDoc height={125} bg="mono100"/>
+      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>React + emotion + styled-system = &#128523;</Text>
+      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>Equipped with the best CSS-in-JS lib available and styled-system for its customizability</Text>
+    </BoxDoc>
+  </Grid>
+  <Grid span={4}>
+    <BoxDoc style={{
+      boxShadow: "0 8px 20px rgba(143,168,191,.35)"
+    }} borderRadius={4} bg='primary100' overflow="hidden">
+      <BoxDoc height={125} bg="mono100"/>
+      <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>MIT Licensed</Text>
+      <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>We strongly believe in giving back to the Open Source community.</Text>
     </BoxDoc>
   </Grid>
 </Container>
 <BoxDoc pt={15} />
 
+
+
 <!-- ## Themes -->
 
 
-## We inspired from
+## Inspiration
 
 <BoxDoc pt={10} />
 
@@ -133,8 +178,8 @@ import {Button, Box} from 'stormbreaker'
     }} borderRadius={4} p={3} mb={5}>
       <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} color="white" bg="primary800">M</BoxDoc>
       <BoxDoc display="flex" justifyContent="center" flexDirection="column" pl={3}>
-        <Text variant="body1" fontWeight="bold" color="mono800">MATERIAL UI</Text>
-        <Text variant="body1" color="mono400">Some text goes here</Text>
+        <Text variant="body1" fontWeight="bold" color="mono800">Material UI</Text>
+        <Text variant="body1" color="mono400">Google Inspired</Text>
       </BoxDoc>
     </BoxDoc>
   </Grid>
@@ -144,8 +189,8 @@ import {Button, Box} from 'stormbreaker'
     }} borderRadius={4} p={3} mb={5}>
       <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="success600" color="white">L</BoxDoc>
       <BoxDoc display="flex" justifyContent="center" flexDirection="column" pl={3}>
-        <Text variant="body1" fontWeight="bold" color="mono800">LEAF UI</Text>
-        <Text variant="body1" color="mono400">Some text goes here</Text>
+        <Text variant="body1" fontWeight="bold" color="mono800">Leaf UI</Text>
+        <Text variant="body1" color="mono400">Treebo</Text>
       </BoxDoc>
     </BoxDoc>
   </Grid>
@@ -153,10 +198,10 @@ import {Button, Box} from 'stormbreaker'
     <BoxDoc display="flex" style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} p={3} mb={5}>
-      <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="mono900" color="white">C</BoxDoc>
+      <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="mono900" color="white">P</BoxDoc>
       <BoxDoc display="flex" justifyContent="center" flexDirection="column" pl={3}>
-        <Text variant="body1" fontWeight="bold" color="mono800">COSMOS DESIGNS</Text>
-        <Text variant="body1" color="mono400">Some text goes here</Text>
+        <Text variant="body1" fontWeight="bold" color="mono800">Primer</Text>
+        <Text variant="body1" color="mono400">Github</Text>
       </BoxDoc>
     </BoxDoc>
   </Grid>
@@ -164,10 +209,10 @@ import {Button, Box} from 'stormbreaker'
     <BoxDoc display="flex" style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} p={3} mb={5}>
-      <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="accent500" color="white">B</BoxDoc>
+      <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="accent500" color="white">G</BoxDoc>
       <BoxDoc display="flex" justifyContent="center" flexDirection="column" pl={3}>
-        <Text variant="body1" fontWeight="bold" color="mono800">BENTO</Text>
-        <Text variant="body1" color="mono400">Some text goes here</Text>
+        <Text variant="body1" fontWeight="bold" color="mono800">Grommet</Text>
+        <Text variant="body1" color="mono400">HP</Text>
       </BoxDoc>
     </BoxDoc>
   </Grid>
