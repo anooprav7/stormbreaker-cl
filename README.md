@@ -1,19 +1,15 @@
-### Stormbreaker
+# Stormbreaker &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/anooprav7/stormbreaker-cl/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/stormbreaker.svg?style=flat)](https://www.npmjs.com/package/stormbreaker) [![issues](https://img.shields.io/github/issues/anooprav7/stormbreaker-cl)](https://www.github.com/anooprav7/stormbreaker-cl/issues)
 
-## TODO
+> Stormbreaker Component Library
 
-1. Theme color and description page - Anoop
-2. https://github.com/storybookjs/storybook/tree/master/addons/viewport
-3. Introduction - Nabeel
-4. https://next--storybookjs.netlify.com/official-storybook/?path=/story/addons-links-button--second -
-5. sizeOfSpace renaming - sizeScale()
-6. Desciption of GlobalStyles - Anoop
-7. React.forwardRef() check - Anoop
-8. Netlify - DONE
-9. eslint
-10. prettier
-11. Revisit Container - Nabeel
-12. CI/CD pipeline - Github Action
-13. Avatar Component
-14. Code Splitting
-15. No default exports for major components
+## Install
+
+```
+yarn add stormbreaker
+
+npm install stormbreaker --save
+```
+
+## [License](LICENSE)
+
+MIT
