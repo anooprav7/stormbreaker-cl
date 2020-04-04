@@ -2,7 +2,7 @@ import React from "react"
 import { action } from "@storybook/addon-actions"
 import { withInfo } from "@storybook/addon-info"
 
-import TextInput from "../src/components/TextInput"
+import {TextInput} from "../src/components/TextInput"
 import { defaultDecoratorArr } from "./themeDecorator"
 
 export default {

@@ -42,4 +42,4 @@ Box.propTypes = {
 };
 
 
-export default Box;
+export {Box};

@@ -109,6 +109,8 @@ const StyledText = styled(
 `
 
 function Text(props) {
+  const {children, ...remainingProps} = props
+  if (remainingProps.href) StyledText = StyledText.withComponent("a")
   return <StyledText {...props}>{props.children}</StyledText>
 }
 
@@ -145,7 +147,8 @@ Text.propTypes = {
   letterSpacing: PropTypes.oneOf(["tight", "normal", "wide"]),
   align: PropTypes.oneOf(["left", "center", "right", "justify"]),
   truncate: PropTypes.bool,
-  noWrap: PropTypes.bool
+  noWrap: PropTypes.bool,
+  href: PropTypes.string
 }
 
 Text.defaultProps = {
@@ -155,4 +158,4 @@ Text.defaultProps = {
 
 Text.displayName = "Text"
 
-export default Text
+export {Text}
