@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { colorKeys } from "../src/theme"
-import Switch from "../src/components/Switch"
+import {Switch} from "../src/components/Switch"
 import { defaultDecoratorArr } from "./themeDecorator"
-import Box from "../src/layout/Box"
+import {Box} from "../src/layout/Box"
 
 export default {
   title: "components/Switch",
@@ -17,11 +17,11 @@ export const Showcase = () => {
 
 export const Sizes = () => (
   <Box display="flex" alignItems="center">
-    <Switch on size="small" />
+    <Switch  size="small" on/>
     <Box pr={4} />
-    <Switch on size="medium" />
+    <Switch size="medium" on/>
     <Box pr={4} />
-    <Switch on size="large" />
+    <Switch  size="large" on/>
   </Box>
 )
 

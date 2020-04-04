@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { theme } from "../src/theme"
-import Switch from "../src/components/Switch"
+import {Switch} from "../src/components/Switch"
 import { defaultDecoratorArr } from "./themeDecorator"
 import styled from "@emotion/styled"
 

@@ -1,9 +1,9 @@
 import React from "react"
 import { colorKeys } from "../src/theme"
-import Checkbox from "../src/components/Checkbox"
+import {Checkbox} from "../src/components/Checkbox"
 import { defaultDecoratorArr } from "./themeDecorator"
-import Text from "../src/components/Typography"
-import Box from "../src/layout/Box"
+import {Text} from "../src/components/Typography"
+import {Box} from "../src/layout/Box"
 
 export default {
   title: "components/Checkbox",

@@ -49,4 +49,4 @@ TextInput.defaultProps = {
   hasError: false
 }
 
-export default TextInput
+export {TextInput}

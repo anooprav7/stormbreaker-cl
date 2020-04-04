@@ -78,4 +78,4 @@ Checkbox.defaultProps = {
 	onChange: () => {}
 };
 
-export default Checkbox;
+export {Checkbox};

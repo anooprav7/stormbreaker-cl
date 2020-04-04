@@ -1,5 +1,5 @@
 import React from "react"
-import Text from "../src/components/Typography"
+import {Text} from "../src/components/Typography"
 import { defaultDecoratorArr } from "./themeDecorator"
 
 import { theme, colorKeys } from "../src/theme"

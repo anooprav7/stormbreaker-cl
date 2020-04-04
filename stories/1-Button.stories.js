@@ -2,8 +2,8 @@ import React from "react"
 
 import { Button } from "../src/components/Button"
 import { defaultDecoratorArr } from "./themeDecorator"
-import Box from "../src/layout/Box"
-import Text from "../src/components/Typography"
+import {Box} from "../src/layout/Box"
+import {Text} from "../src/components/Typography"
 
 export default {
   title: "components/Button",

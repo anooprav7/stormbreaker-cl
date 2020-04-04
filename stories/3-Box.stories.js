@@ -1,6 +1,6 @@
 import React from "react"
-import Box from "../src/layout/Box"
-import Text from "../src/components/Typography"
+import {Box} from "../src/layout/Box"
+import {Text} from "../src/components/Typography"
 import { defaultDecoratorArr } from "./themeDecorator"
 
 import { theme, colorKeys } from "../src/theme"

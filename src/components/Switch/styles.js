@@ -1,6 +1,5 @@
 import { theme } from "../../theme"
 import { getColorFromAppearance } from "../../utils/stylesHelper"
-import { size, width } from "styled-system"
 
 export default {
   inActiveColor() {
@@ -16,6 +15,15 @@ export default {
   pointerEvents(props) {
     if (props.disabled) return "no-drop"
     return "grab"
+  },
+
+  colors(props) {
+    if(props.on) {
+      return getColorFromAppearance(props.theme, props.appearance, 500)
+    }
+    else {
+      return getColorFromAppearance(props.theme, "mono", 200)
+    }
   },
 
   size: {
