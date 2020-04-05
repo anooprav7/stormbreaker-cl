@@ -8,6 +8,7 @@ import { Button } from "../src/components/Button"
 import { theme, colorKeys } from "../src/theme"
 import { ThemeProvider } from "../src/components/ThemeProvider"
 import {defaultDecoratorArr}  from "./themeDecorator"
+import githubIcon from '../static/github_white.png'
 
 import {BoxDoc, ButtonDoc} from './jsFiles/welcome'
 
@@ -27,7 +28,7 @@ A sincere effort at creating a library of beautifully crafted components and cre
       <Text variant="h4" fontWeight="bold">Alpha release</Text>
       <Text variant="body2" pt={3} color="mono" fontWeight="light"> Stormbreaker is still in its nascent stages. Please feel free to fork the repo, explore the code or raise issues on anything ranging from bugs to suggestions.</Text>
       <Box pt={6}/>
-      <Button appearance="primary" href='https://github.com/anooprav7/stormbreaker-cl'>Github</Button>
+      <Button appearance="primary" href='https://github.com/anooprav7/stormbreaker-cl'><img src={githubIcon} style={{width: 16, height: 16, marginRight: 8}}/>Github</Button>
     </BoxDoc>
   </Grid>
 </Container>
@@ -173,7 +174,7 @@ import { Button, Checkbox } from 'stormbreaker'
 
 <Container gap={20}>
   <Grid span={6}>
-    <BoxDoc display="flex" style={{
+    <BoxDoc display="flex" href="https://material-ui.com/" target="_blank" style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} p={3} mb={5}>
       <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} color="white" bg="primary800">M</BoxDoc>
@@ -184,7 +185,7 @@ import { Button, Checkbox } from 'stormbreaker'
     </BoxDoc>
   </Grid>
   <Grid span={6}>
-    <BoxDoc display="flex" style={{
+    <BoxDoc display="flex" href="https://leaf-ui.treebo.com/" target="_blank" style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} p={3} mb={5}>
       <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="success600" color="white">L</BoxDoc>
@@ -195,7 +196,7 @@ import { Button, Checkbox } from 'stormbreaker'
     </BoxDoc>
   </Grid>
   <Grid span={6}>
-    <BoxDoc display="flex" style={{
+    <BoxDoc display="flex" href="https://primer.style/components/" target="_blank" style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} p={3} mb={5}>
       <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="mono900" color="white">P</BoxDoc>
@@ -206,7 +207,7 @@ import { Button, Checkbox } from 'stormbreaker'
     </BoxDoc>
   </Grid>
   <Grid span={6}>
-    <BoxDoc display="flex" style={{
+    <BoxDoc display="flex" href="https://v2.grommet.io/" target="_blank" style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} p={3} mb={5}>
       <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="accent500" color="white">G</BoxDoc>
