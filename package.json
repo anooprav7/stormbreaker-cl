@@ -1,6 +1,6 @@
 {
   "name": "stormbreaker",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Stormbreaker React Component Library",
   "main": "index.js",
   "module": "es6/index.js",
