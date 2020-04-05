@@ -1,6 +1,17 @@
-# Stormbreaker &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/anooprav7/stormbreaker-cl/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/stormbreaker.svg?style=flat)](https://www.npmjs.com/package/stormbreaker) [![issues](https://img.shields.io/github/issues/anooprav7/stormbreaker-cl)](https://www.github.com/anooprav7/stormbreaker-cl/issues) [![Netlify Status](https://api.netlify.com/api/v1/badges/1843f57a-4435-4ba4-9093-4ac6e1d8e42e/deploy-status)](https://app.netlify.com/sites/stormbreaker-v2/deploys)
+# Stormbreaker &middot;
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/anooprav7/stormbreaker-cl/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/stormbreaker.svg?style=flat)](https://www.npmjs.com/package/stormbreaker)
+[![issues](https://img.shields.io/github/issues/anooprav7/stormbreaker-cl)](https://www.github.com/anooprav7/stormbreaker-cl/issues)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1843f57a-4435-4ba4-9093-4ac6e1d8e42e/deploy-status)](https://app.netlify.com/sites/stormbreaker-v2/deploys)
+![core size](https://img.shields.io/bundlephobia/min/stormbreaker.svg?label=core%20size)
+![core gzip size](https://img.shields.io/bundlephobia/minzip/stormbreaker.svg?label=core%20gzip%20size)
 
 > Stormbreaker Component Library
+
+## Detailed Documentation
+
+[Stormbreaker Storybook Docs](https://stormbreaker-v2.netlify.com/)
 
 ## Install
 
