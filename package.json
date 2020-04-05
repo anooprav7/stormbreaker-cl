@@ -15,8 +15,8 @@
     "build.babelEs6": "babel ./src --out-dir ./build/es6 --ignore '**/scss,**/__test__, **/*.stories.js'",
     "build.postBuild": "node scripts/postBuild.js",
     "build": "yarn build.preBuild && yarn build.babel && yarn build.babelEs6",
-    "storybook": "start-storybook -p 9007 -s public",
-    "storybook.docs": "start-storybook -p 9007 -s public --docs",
+    "storybook": "start-storybook -p 7007 -s public",
+    "storybook.docs": "start-storybook -p 7007 -s public --docs",
     "build-storybook": "build-storybook -s public",
     "build-storybook.docs": "build-storybook --docs"
   },
