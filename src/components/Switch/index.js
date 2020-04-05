@@ -55,7 +55,7 @@ Switch.propTypes = {
 	/** Disabled state of switch */
 	disabled: PropTypes.bool,
 	/**  Function to switch the active state */
-	onChange: PropTypes.bool
+	onChange: PropTypes.func
 };
 
 Switch.defaultProps = {
