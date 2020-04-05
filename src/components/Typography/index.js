@@ -64,7 +64,8 @@ const StyledText = styled(
     ...props
   }) => {
     const variantFn = () => {
-      if (as) return as
+      if(props.href) return 'a'
+      else if (as) return as
       else if (variant) return theme.typographyVariants[variant].as
       else return "div"
     }
@@ -110,8 +111,7 @@ const StyledText = styled(
 
 function Text(props) {
   const {children, ...remainingProps} = props
-  if (remainingProps.href) StyledText = StyledText.withComponent("a")
-  return <StyledText {...props}>{props.children}</StyledText>
+  return <StyledText {...remainingProps}>{props.children}</StyledText>
 }
 
 Text.propTypes = {

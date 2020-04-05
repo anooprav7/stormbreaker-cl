@@ -68,7 +68,7 @@ Checkbox.propTypes = {
 	/** Decides active/ inactive state of checkbox */
 	checked: PropTypes.bool,
 	/** Checkbox onChange function */
-	onChange: PropTypes.bool
+	onChange: PropTypes.func
 };
 
 Checkbox.defaultProps = {
