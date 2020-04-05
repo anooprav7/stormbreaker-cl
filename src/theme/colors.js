@@ -9,7 +9,7 @@ export default {
     600: "#757575",
     700: "#616161",
     800: "#424242",
-    900: "#212121"
+    900: "#212121",
   },
   indigo: {
     50: "#E8EAF6",
@@ -21,7 +21,7 @@ export default {
     600: "#3949AB",
     700: "#303F9F",
     800: "#283593",
-    900: "#1A237E"
+    900: "#1A237E",
   },
   lightBlue: {
     50: "#E1F5FE",
@@ -33,7 +33,7 @@ export default {
     600: "#039BE5",
     700: "#0288D1",
     800: "#0277BD",
-    900: "#01579B"
+    900: "#01579B",
   },
   blue: {
     50: "#E3F2FD",
@@ -45,7 +45,7 @@ export default {
     600: "#1E88E5",
     700: "#1976D2",
     800: "#1565C0",
-    900: "#0D47A1"
+    900: "#0D47A1",
   },
   yellow: {
     50: "#FFFDE7",
@@ -57,7 +57,7 @@ export default {
     600: "#FDD835",
     700: "#FBC02D",
     800: "#F9A825",
-    900: "#F57F17"
+    900: "#F57F17",
   },
   orange: {
     50: "#FFF3E0",
@@ -69,7 +69,7 @@ export default {
     600: "#FB8C00",
     700: "#F57C00",
     800: "#EF6C00",
-    900: "#E65100"
+    900: "#E65100",
   },
   amber: {
     50: "#FFF8E1",
@@ -81,7 +81,7 @@ export default {
     600: "#FFB300",
     700: "#FFA000",
     800: "#FF8F00",
-    900: "#FF6F00"
+    900: "#FF6F00",
   },
   green: {
     50: "#E8F5E9",
@@ -93,7 +93,7 @@ export default {
     600: "#43A047",
     700: "#388E3C",
     800: "#2E7D32",
-    900: "#1B5E20"
+    900: "#1B5E20",
   },
   // https://material.io/design/color/#tools-for-picking-colors
   compBlue: {
@@ -106,7 +106,7 @@ export default {
     600: "#eb6425",
     700: "#dd5d21",
     800: "#cf561e",
-    900: "#b64a19"
+    900: "#b64a19",
   },
   // https://getbootstrap.com/docs/4.0/utilities/colors/
   bootWarn: {
@@ -119,7 +119,7 @@ export default {
     600: "#ffb300",
     700: "#ffa000",
     800: "#ff8f00",
-    900: "#ff6f00"
+    900: "#ff6f00",
   },
   cos: {
     green: {
@@ -132,7 +132,7 @@ export default {
       600: "#00b23f",
       700: "#009f32",
       800: "#008e25",
-      900: "#006e10"
+      900: "#006e10",
     },
     blue: {
       50: "#e0f6fd",
@@ -144,7 +144,7 @@ export default {
       600: "#00a2e5",
       700: "#008fd2",
       800: "#007dbf",
-      900: "#005d9e"
+      900: "#005d9e",
     },
     grey: {
       50: "#fbfbfb",
@@ -156,7 +156,7 @@ export default {
       600: "#7a7a7a",
       700: "#656565",
       800: "#464646",
-      900: "#252525"
+      900: "#252525",
     },
     orange: {
       50: "#fef7e2",
@@ -168,15 +168,12 @@ export default {
       600: "#f5ae23",
       700: "#f49c20",
       800: "#f38c1e",
-      900: "#f06f1b"
-    }
-  }
+      900: "#f06f1b",
+    },
+  },
 }
 
 export const newTheme = {
-  white: "#FFFFFF",
-  black: "#000000",
-
   primary50: "#E1F5FE",
   primary100: "#B3E5FC",
   primary200: "#81D4FA",
@@ -247,5 +244,8 @@ export const newTheme = {
   mono600: "#666666",
   mono700: "#4D4D4D",
   mono800: "#333333",
-  mono900: "#1A1A1A"
+  mono900: "#1A1A1A",
+
+  white: "#FFFFFF",
+  black: "#000000",
 }
