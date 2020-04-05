@@ -2,8 +2,8 @@ import React from "react"
 import { Meta, Story, Preview, Description } from "@storybook/addon-docs/blocks"
 import { Button } from "../src/components/Button"
 import { defaultDecoratorArr } from "./themeDecorator"
-import {Box} from "../src/layout/Box"
-import {Text} from "../src/components/Typography"
+import { Box } from "../src/layout/Box"
+import { Text } from "../src/components/Typography"
 
 export default {
   title: "components/Button",
@@ -17,9 +17,6 @@ export default {
 }
 
 export const Showcase = () => <Button>{"Default"}</Button>
-export const Usage = () => (
-  <Description>{"import {Button} from 'stormbreaker';"}</Description>
-)
 
 export const Sizes = () => (
   <>

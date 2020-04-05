@@ -93,13 +93,17 @@ const SectionTitle = styled.div`
 const ColorList = Object.keys(theme.colors).map((item, idx) => {
   const color = theme.colors[item]
   let ColorItem = <ThemeColorItem color={color} title={item} subTitle={color} />
-  if (idx === 2 || (idx > 2 && (idx - 2) % 11 === 0)) {
+  // if (idx === 2 || (idx > 2 && (idx - 2) % 11 === 0)) {
+  if (idx === 0 || (idx > 0 && (idx - 0) % 11 === 0)) {
     let title = item.substring(0, item.length - 2)
     title = `${title.charAt(0).toUpperCase()}${title.slice(1)}`
+    if (title === "Whi") title = `Base Colors`
     ColorItem = (
       <>
         <div style={{ width: "100%" }} />
-        <SectionTitle>{title}</SectionTitle>
+        <SectionTitle style={idx === 0 ? { marginTop: 16 } : {}}>
+          {title}
+        </SectionTitle>
         {ColorItem}
       </>
     )
@@ -110,7 +114,7 @@ const ColorList = Object.keys(theme.colors).map((item, idx) => {
 export const ThemeColorsWrapper = () => {
   return (
     <Container>
-      <SectionTitle>Base Colors</SectionTitle>
+      {/* <SectionTitle>Base Colors</SectionTitle> */}
       {ColorList}
     </Container>
   )
