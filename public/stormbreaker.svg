@@ -22,7 +22,7 @@
                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
             </g>
         </g>
-        <text id="Stormbreaker" font-family="NunitoSans-Bold, Nunito Sans" font-size="28" font-weight="bold" letter-spacing="1.214095" fill="#1A1A1A">
+        <text id="Stormbreaker" font-family="NunitoSans-Bold, Nunito Sans,Helvetica Neue, sans-serif, Helvetica, Arial" font-size="28" font-weight="bolder" letter-spacing="1.214095" fill="#1A1A1A">
             <tspan x="38" y="27">Stormbreaker</tspan>
         </text>
     </g>
