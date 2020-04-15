@@ -18,7 +18,7 @@ let StyledButton = styled(
   color: ${styles.color};
   font-size: 12px;
   padding: ${styles.padding};
-  width: ${(props) => (props.block ? "100%" : "")};
+  width: ${props => (props.block ? "100%" : "")};
   border-width: 1px;
   border-style: solid;
   border-color: ${styles.borderColor};
@@ -47,7 +47,8 @@ const SpinnerContainer = styled.span`
   align-items: center;
 `
 
-function Button(props) {
+// function Button(props) {
+const Button = React.forwardRef((props, ref) => {
   const { children, ...remainingProps } = props
   let LoadingButton
   if (remainingProps.href) StyledButton = StyledButton.withComponent("a")
@@ -72,8 +73,12 @@ function Button(props) {
       </LoadingButton>
     )
   }
-  return <StyledButton {...remainingProps}>{children}</StyledButton>
-}
+  return (
+    <StyledButton ref={ref} {...remainingProps}>
+      {children}
+    </StyledButton>
+  )
+})
 
 const colorKeys = ["primary", "accent", "success", "error", "warning"]
 // const colorKeys = Object.keys(theme.colors)
@@ -90,7 +95,7 @@ Button.propTypes = {
   /** Loading state */
   loading: PropTypes.bool,
   /** Anchor button to redirection to href */
-  href: PropTypes.string,
+  href: PropTypes.string
 }
 
 Button.defaultProps = {
@@ -98,7 +103,7 @@ Button.defaultProps = {
   size: "medium",
   loading: false,
   outline: false,
-  block: false,
+  block: false
 }
 
 export { Button }
