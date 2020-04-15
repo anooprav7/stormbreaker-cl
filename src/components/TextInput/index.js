@@ -29,10 +29,15 @@ const StyledTextInput = styled.input`
   }
 `
 
-function TextInput(props) {
+// function TextInput(props) {
+//   const { children, ...remainingProps } = props
+//   return <StyledTextInput {...remainingProps} />
+// }
+
+const TextInput = React.forwardRef((props, ref) => {
   const { children, ...remainingProps } = props
-  return <StyledTextInput {...remainingProps} />
-}
+  return <StyledTextInput ref={ref} {...remainingProps} />
+})
 
 TextInput.propTypes = {
   /** Size of the Input */
@@ -49,4 +54,4 @@ TextInput.defaultProps = {
   hasError: false
 }
 
-export {TextInput}
+export { TextInput }
