@@ -107,6 +107,7 @@ const StyledText = styled(
     props.letterSpacing ? props.theme.letterSpacing[props.letterSpacing] : ""};
   text-overflow: ${props => (props.truncate ? "ellipsis" : "")};
   overflow: ${props => (props.truncate ? "hidden" : "")};
+  text-transform: ${props => (props.textTransform ? props.textTransform : "")};
 `
 
 function Text(props) {
@@ -148,7 +149,8 @@ Text.propTypes = {
   align: PropTypes.oneOf(["left", "center", "right", "justify"]),
   truncate: PropTypes.bool,
   noWrap: PropTypes.bool,
-  href: PropTypes.string
+  href: PropTypes.string,
+  textTransform: PropTypes.string
 }
 
 Text.defaultProps = {
