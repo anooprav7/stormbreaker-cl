@@ -4,10 +4,11 @@ import PropTypes from "prop-types"
 import {Box} from "../Box"
 import { theme } from "../../theme"
 
-let StyledGrid = styled(({ gap, span, ...props }) => (
-  <Box px={gap ? (4 * gap) / 2 + "px" : 1} flex="0 0 auto" {...props} />
+let StyledGrid = styled(({ gap, span, direction, ...props }) => (
+  <Box px={gap && direction==='row' ? (4 * gap) / 2 + "px" : 0} py={gap && direction==='column' ? (4 * gap) / 2 + "px" : 0}  flex="0 0 auto" {...props} />
 ))`
   box-sizing: border-box;
+  flex-grow: 1;
   max-width: ${props =>
     props.span ? (props.span * 100) / theme.gridColumns[0] + "%" : ""};
   flex-basis: ${props =>
@@ -20,11 +21,7 @@ function Grid(props) {
 
 Grid.propTypes = {
   /** Define number of column span */
-  span: PropTypes.number
-}
-
-Grid.defaultProps = {
-  span: 12
+  span: PropTypes.number,
 }
 
 export {Grid}
