@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
-import { space, color, border, flexbox, layout } from 'styled-system';
+import { space, color, border, flexbox, layout, background } from 'styled-system';
 import styles from './styles';
 
 let StyledBox = styled('div')`
@@ -10,6 +10,7 @@ let StyledBox = styled('div')`
 	${color};
 	${flexbox};
 	${layout};
+	${background};
 	box-sizing: border-box;
 	text-decoration: none;
 	box-shadow: ${styles.boxShadow};

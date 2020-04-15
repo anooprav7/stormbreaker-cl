@@ -5,6 +5,7 @@ import {Grid} from "../src/layout/Grid"
 import {Text} from "../src/components/Typography"
 import {Checkbox} from "../src/components/Checkbox"
 import { Button } from "../src/components/Button"
+import { Avatar } from "../src/components/Avatar"
 import { theme, colorKeys } from "../src/theme"
 import { ThemeProvider } from "../src/components/ThemeProvider"
 import {defaultDecoratorArr}  from "./themeDecorator"
@@ -131,7 +132,7 @@ import { Button, Checkbox } from 'stormbreaker'
     <BoxDoc style={{
       boxShadow: "0 8px 20px rgba(143,168,191,.35)"
     }} borderRadius={4} bg='error100' overflow="hidden">
-      <BoxDoc height={125} bg="mono100"/>
+      <BoxDoc height={125} bg="mono100" />
       <Text color="mono900" fontWeight="bold" variant="body1" pt={3} pb={1} px={3}>React + emotion + styled-system = &#128523;</Text>
       <Text color="mono700" fontWeight="light" variant="body1"  pb={3} px={3}>Equipped with the best CSS-in-JS lib available and styled-system for its customizability</Text>
     </BoxDoc>
@@ -156,21 +157,6 @@ import { Button, Checkbox } from 'stormbreaker'
 ## Inspiration
 
 <BoxDoc pt={10} />
-
-<!-- 
-<Container>
-  <Grid>
-    <BoxDoc display="flex" alignItems="center">
-      <BoxDoc height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="warning">M</BoxDoc>
-    </BoxDoc>
-  </Grid>
-  <Grid>
-    
-  </Grid>
-  <Grid>
-    
-  </Grid>
-</Container> -->
 
 <Container gap={20}>
   <Grid span={6}>
@@ -218,17 +204,36 @@ import { Button, Checkbox } from 'stormbreaker'
     </BoxDoc>
   </Grid>
 </Container>
+<BoxDoc pt={15} />
 
+## About us
 
-
-<!-- <BoxDoc  height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="warning">M</BoxDoc>
-
-`material-ui: https://stormbreaker-icons.com`
-
-<BoxDoc mt={8} height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="warning">S</BoxDoc>
-
-`styled-system: https://stormbreaker-icons.com`
-
-<BoxDoc mt={8} height={50} width={50} display="flex" alignItems="center" justifyContent="center" borderRadius={4} bg="warning">C</BoxDoc>
-
-`cosmos-ui: https://stormbreaker-icons.com` -->
+<BoxDoc pt={10}/>
+<Container gap={10} justifyContent="center">
+  <Grid span={4}>
+    <BoxDoc display="flex" flexDirection="column" alignItems="center">
+      <Avatar border="5px solid" borderColor="white" size={44} rounded src="https://avatars1.githubusercontent.com/u/14026683?s=400&u=f79f736f8a34e916fd7f8ae0eed879fca797170d&v=4" 
+      style={{
+        boxShadow: "0 8px 20px rgba(143,168,191,.35)"
+      }}/>
+      <BoxDoc pt={5}/>
+      <Text variant="h4" fontWeight="bold" color="mono900">Anoop Raveendran</Text>
+      <BoxDoc pt={1}/>
+      <Text variant="body2" target="_blank" href="https://github.com/anooprav7" color="mono">@anooprav7</Text>
+      <BoxDoc pt={10}/>
+  </BoxDoc>
+  </Grid>
+  <Grid span={4}>
+    <BoxDoc display="flex" flexDirection="column" alignItems="center">
+      <Avatar  border="5px solid" borderColor="white" size={44} rounded src="https://avatars2.githubusercontent.com/u/16625733?s=400&u=0dfb1390a9f36180cc641041465e534f74121154&v=4" 
+      style={{
+        boxShadow: "0 8px 20px rgba(143,168,191,.35)"
+      }}/>
+      <BoxDoc pt={5}/>
+      <Text variant="h4" fontWeight="bold" color="mono900">Nabeel Thurakkal</Text>
+      <BoxDoc pt={1}/>
+      <Text variant="body2" target="_blank" href="https://github.com/thurakkal92" color="mono">@thurakkal92</Text>
+      <BoxDoc pt={10}/>
+  </BoxDoc>
+  </Grid>
+</Container>
