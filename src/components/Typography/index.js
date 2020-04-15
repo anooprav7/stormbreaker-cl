@@ -150,7 +150,7 @@ Text.propTypes = {
   truncate: PropTypes.bool,
   noWrap: PropTypes.bool,
   href: PropTypes.string,
-  textTransform: PropTypes.string
+  textTransform: PropTypes.oneOf(['uppercase','capitalize','lowercase'])
 }
 
 Text.defaultProps = {
